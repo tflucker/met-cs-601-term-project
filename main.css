@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .navbar-style div#header-title-container {
     background-color: cadetblue; 
-    padding: 5px;
+    padding: 0.5em;
 }
 
 
@@ -55,6 +55,14 @@ h1, h2, h3, h4, h5, h6, p, a {
     background-color: lightgray;
     padding: 0 0.5em 0.5em 1em;
     margin-top: 1em;
+}
+
+.body-style {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 5em; 
+    padding-bottom:2em; 
+    margin-top: 4em;
 }
 
 .centered-media {
