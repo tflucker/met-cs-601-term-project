@@ -11,17 +11,22 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body id="main-content">
+<body id="page-top">
     <!-- Navigation bar to access other pages. -->
-    <header id="navbar-container">
-        <ul id="top-nav-menu">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="about-me.html">About Me</a></li>
-        </ul>
+    <header id="navbar-container" class="navbar-style">
+        <div id="header-title-container">
+            <h1 id="header-title">Portfolio Website - Timothy Flucker</h1>
+        </div>
+        <div id="navbar-links">
+            <ul id="top-nav-menu">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+            </ul>
+        </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <article id="education-article">
             <h1>Education</h1>
             <div id="education-content">
@@ -161,13 +166,13 @@
     </main>
 
     <!-- Footer giving author and version information -->
-    <footer style="margin-top: 50px;">
+    <footer class="footer-style">
         <hr>
-        <p>
-            <a href="#main-content">Back to Top</a><br>
+        <a href="#page-top"><img src="https://static.thenounproject.com/png/691751-200.png" width="25px" height="25px" alt="Back to Top icon by Noun Project">  Back to Top</a><br>
+        <p style="text-align:center;">
             Created By: <strong>Timothy Flucker</strong><br>
-            Last Updated On: <strong>11/3/2022</strong><br>
-            Version: <strong>1.0.0</strong>
+            Last Updated On: <strong>11/7/2022</strong><br>
+            Version: <strong>2.1.0</strong>
         </p>
     </footer>
 </body>
