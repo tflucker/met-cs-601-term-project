@@ -1,4 +1,3 @@
-
 /* Global CSS classes */
 
 .text-center {
@@ -41,9 +40,25 @@ table, thead, tbody, tr, td {
     width: auto;
 }
 
+#navbar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .navbar-style div#header-title-container {
     background-color: cadetblue; 
     padding: 0.5em;
+}
+
+
+.body-style {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 5em; 
+    padding-bottom:2em; 
+    margin-top: 4em;
+    background-color: whitesmoke;
 }
 
 .footer-style {
@@ -52,14 +67,36 @@ table, thead, tbody, tr, td {
     margin-top: 1em;
 }
 
+img.square-image {
+    width: 250px;
+    height: 250px;
+}
+
+
+#work-experience-section article {
+    padding: 1em;
+    margin: 1em 0;
+}
+
+#work-experience-section article:nth-child(odd){
+    background-color: lightsteelblue;
+    border-radius: 2em;
+}
+
+#work-experience-section article:nth-child(even){
+    background-color: antiquewhite;
+    border-radius: 2em;
+}
+
 
 /* media query for mobile devices */
 @media (min-device-width: 375px) and (max-device-width: 767px){
 
-    h1, h2, h3, h4, h5, h6, p, a, td {
-        font-size: large;
+    h1, h2, h3, h4, h5, h6, p, a {
+        font-size: x-large;
     }
-
+    
+    /* Homepage specific CSS classes */
     #welcome-content {
         display: block;
         margin: auto;
@@ -81,16 +118,27 @@ table, thead, tbody, tr, td {
         width: 200px;
         height: 250px;
     }
+
+    /* Resume page specific CSS classes */
+    .education-section {
+        background-color: thistle;
+        margin: 0.5em 1em;
+        padding: 1.5em;
+        border-radius: 2em;
+    }
+
+
 }
 
 /* media query for tablet devices */
 @media (min-device-width: 768px) and (max-device-width: 1024px){
 
 
-    h1, h2, h3, h4, h5, h6, p, a, td {
+    h1, h2, h3, h4, h5, h6, p, a {
         font-size: xx-large;
     }
     
+    /* Homepage specific CSS classes */
     div#welcome-container {
         margin: 1em 1em; 
         padding: 3em 3em;
@@ -131,25 +179,12 @@ table, thead, tbody, tr, td {
         margin-right: 10px;
     }
 
-    #navbar-container {
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-
     h1, h2, h3, h4, h5, h6, p, a, td {
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
-    .body-style {
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-top: 5em; 
-        padding-bottom:2em; 
-        margin-top: 4em;
-        background-color: whitesmoke;
-    }
 
+    /* Homepage specific CSS classes */
     div#welcome-container {
         margin: 1em 10em; 
         padding: 3em 3em;
