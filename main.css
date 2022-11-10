@@ -124,7 +124,7 @@ img.square-image {
 
     }
 
-    section.welcome-content img {
+    .nice-profile-pic {
         width: 200px;
         height: 250px;
     }
@@ -172,7 +172,7 @@ img.square-image {
         width: 75%;
     }
 
-    section.welcome-content img {
+    .nice-profile-pic {
         width: 350px;
         height: 350px;
     }
@@ -239,7 +239,7 @@ img.square-image {
     }
   }
   
-  .welcome-content img {
+  .nice-profile-pic {
     box-sizing: border-box;
     border: 5px white solid;
     border-radius: 50%;
