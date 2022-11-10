@@ -8,6 +8,11 @@
     font-style: italic;
 }
 
+.width-half {
+    margin: 0 auto;
+    width: 50%
+}
+
 .section-header-text {
     text-decoration: underline;
     font-size: xx-large;
@@ -51,7 +56,7 @@ table, thead, tbody, tr, td {
 }
 
 #navbar-container {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
 }
@@ -61,13 +66,16 @@ table, thead, tbody, tr, td {
     padding: 0.5em;
 }
 
+.gradient-background {
+    background: rgb(26, 188, 156);
+    background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+    background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+  }
+
 
 .body-style {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 5em; 
-    padding-bottom:2em; 
-    margin-top: 4em;
+    padding: 5em 1em 2em 1em;
     background-color: whitesmoke;
 }
 
@@ -75,6 +83,26 @@ table, thead, tbody, tr, td {
     background-color: lightgray;
     padding: 0em 0.5em 0.5em 1em;
     margin-top: 1em;
+}
+
+.page-jumbotron {
+    margin: 1em 10em; 
+    padding: 3em 3em;
+    background-color:darkseagreen;
+    border-radius: 2em;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    place-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.center-table {
+    margin: 2em auto;
 }
 
 img.square-image {
@@ -111,11 +139,9 @@ img.square-image {
         margin: auto;
     }
 
-    div#welcome-container {
-        margin: 1em 1em; 
+    .page-jumbotron {
+        margin: 1em 1em;
         padding: 3em 3em;
-        background-color:darkseagreen;
-        border-radius: 2em;
     }
 
     #welcome-video {
@@ -130,12 +156,22 @@ img.square-image {
     }
 
     /* Resume page specific CSS classes */
-    .education-section {
+    /* .education-section {
         background-color: thistle;
         margin: 0.5em 1em;
         padding: 1.5em;
         border-radius: 2em;
+    } */
+
+    .flex-center {
+        flex-direction: column;
     }
+
+    .flex-center img {
+        margin: 1em 0;
+        border: 1px solid black;
+    }
+
 
 }
 
@@ -147,6 +183,10 @@ img.square-image {
         font-size: xx-large;
     }
     
+    td {
+        font-size: x-large;
+    }
+
     /* Homepage specific CSS classes */
     div#welcome-container {
         margin: 1em 1em; 
@@ -160,11 +200,9 @@ img.square-image {
         height: 350px;
     }
 
-    section.welcome-content {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        place-content: center;
+    .page-jumbotron {
+        margin: 1em 3em;
+        padding: 2em 2em;
     }
 
     section.welcome-content p {
@@ -176,7 +214,6 @@ img.square-image {
         width: 350px;
         height: 350px;
     }
-
 }
 
 
@@ -194,20 +231,6 @@ img.square-image {
 
 
     /* Homepage specific CSS classes */
-    div#welcome-container {
-        margin: 1em 10em; 
-        padding: 3em 3em;
-        background-color:darkseagreen;
-        border-radius: 2em;
-    }
-
-
-    section.welcome-content {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        place-content: center;
-    }
 
     section.welcome-content p {
         margin-left: 1em;
@@ -248,3 +271,4 @@ img.square-image {
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
   }
+
