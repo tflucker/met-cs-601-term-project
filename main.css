@@ -68,8 +68,6 @@ table, thead, tbody, tr, td {
 
 .gradient-background {
     background: rgb(26, 188, 156);
-    background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
     background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
   }
 
@@ -127,7 +125,7 @@ img.square-image {
 
 
 /* media query for mobile devices */
-@media (min-device-width: 375px) and (max-device-width: 767px){
+@media (max-width: 767px){
 
     h1, h2, h3, h4, h5, h6, p, a, li {
         font-size: x-large;
@@ -176,7 +174,7 @@ img.square-image {
 }
 
 /* media query for tablet devices */
-@media (min-device-width: 768px) and (max-device-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px){
 
 
     h1, h2, h3, h4, h5, h6, p, a {
@@ -218,7 +216,7 @@ img.square-image {
 
 
 /* media query for desktop devices */
-@media (min-device-width: 1025px){
+@media (min-width: 1025px){
 
     div#image-container img {
         margin-left: 10px;
