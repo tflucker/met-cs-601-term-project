@@ -1,5 +1,4 @@
 /* Global CSS classes */
-
 .text-center {
     text-align: center;
 }
@@ -47,7 +46,11 @@ li a:hover:not(.active) {
     background-color: cornflowerblue;
 }
 
-table, thead, tbody, tr, td {
+table,
+thead,
+tbody,
+tr,
+td {
     border: 1px solid black;
 }
 
@@ -62,20 +65,20 @@ table, thead, tbody, tr, td {
 }
 
 .navbar-style div#header-title-container {
-    background-color: cadetblue; 
     padding: 0.5em;
 }
 
 .gradient-background {
     background: rgb(26, 188, 156);
     background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
-  }
+}
 
 
 .body-style {
     padding: 5em 1em 2em 1em;
-    /* background-color: whitesmoke; */
     background-image: url("resources/code-background.jpg");
+    /* Original credit for background image */
+    /* https://pixabay.com/videos/binary-computer-programming-digital-16714/ */
 }
 
 .footer-style {
@@ -85,7 +88,7 @@ table, thead, tbody, tr, td {
 }
 
 .page-jumbotron {
-    margin: 1em 10em; 
+    margin: 1em 10em;
     padding: 3em 3em;
     border-radius: 2em;
 }
@@ -131,25 +134,32 @@ img.square-image {
     margin: 1em 0;
 }
 
-#work-experience-section article:nth-child(odd){
+#work-experience-section article:nth-child(odd) {
     background-color: lightsteelblue;
     border-radius: 2em;
 }
 
-#work-experience-section article:nth-child(even){
+#work-experience-section article:nth-child(even) {
     background-color: antiquewhite;
     border-radius: 2em;
 }
 
 
 /* media query for mobile devices */
-@media (max-width: 767px){
+@media (max-width: 767px) {
 
-    h1, h2, h3, h4, h5, h6, p, a, li {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    li {
         font-size: x-large;
     }
-    
-    /* Homepage specific CSS classes */
+
     #welcome-content {
         display: block;
         margin: auto;
@@ -171,14 +181,6 @@ img.square-image {
         height: 250px;
     }
 
-    /* Resume page specific CSS classes */
-    /* .education-section {
-        background-color: thistle;
-        margin: 0.5em 1em;
-        padding: 1.5em;
-        border-radius: 2em;
-    } */
-
     .flex-center {
         flex-direction: column;
     }
@@ -192,22 +194,28 @@ img.square-image {
 }
 
 /* media query for tablet devices */
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
 
 
-    h1, h2, h3, h4, h5, h6, p, a {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
         font-size: xx-large;
     }
-    
+
     td {
         font-size: x-large;
     }
 
-    /* Homepage specific CSS classes */
     div#welcome-container {
-        margin: 1em 1em; 
+        margin: 1em 1em;
         padding: 3em 3em;
-        background-color:darkseagreen;
+        background-color: darkseagreen;
         border-radius: 2em;
     }
 
@@ -234,19 +242,25 @@ img.square-image {
 
 
 /* media query for desktop devices */
-@media (min-width: 1025px){
+@media (min-width: 1025px) {
 
     div#image-container img {
         margin-left: 10px;
         margin-right: 10px;
     }
 
-    h1, h2, h3, h4, h5, h6, p, a, td {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    td {
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
-
-    /* Homepage specific CSS classes */
 
     section.welcome-content p {
         margin-left: 1em;
@@ -261,30 +275,29 @@ img.square-image {
 
 
 /* CSS for animated picture on homepage */
-
-
 @keyframes float {
     0% {
-      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-      transform: translatey(0px);
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
     }
+
     50% {
-      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-      transform: translatey(-20px);
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-20px);
     }
+
     100% {
-      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-      transform: translatey(0px);
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
     }
-  }
-  
-  .nice-profile-pic {
+}
+
+.nice-profile-pic {
     box-sizing: border-box;
     border: 5px white solid;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
-  }
-
+}
