@@ -74,7 +74,8 @@ table, thead, tbody, tr, td {
 
 .body-style {
     padding: 5em 1em 2em 1em;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+    background-image: url("resources/code-background.jpg");
 }
 
 .footer-style {
@@ -86,8 +87,25 @@ table, thead, tbody, tr, td {
 .page-jumbotron {
     margin: 1em 10em; 
     padding: 3em 3em;
-    background-color:darkseagreen;
     border-radius: 2em;
+}
+
+.bubble-container {
+    padding: 1em;
+    background-color: whitesmoke;
+    border-radius: 2em;
+}
+
+.sea-green {
+    background-color: darkseagreen;
+}
+
+.dark-salmon {
+    background-color: darksalmon;
+}
+
+.dark-khaki {
+    background-color: darkkhaki;
 }
 
 .flex-center {
