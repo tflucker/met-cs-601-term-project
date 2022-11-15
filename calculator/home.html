@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 - Calculator App</title>
+    <meta name="description"
+        content="MET CS 601 Assignment 3, creating a calculator application with HTML, CSS, and JavaScript.">
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js"></script>
+</head>
+
+<body>
+
+    <main id="main-content" class="page-jumbotron sea-green">
+
+        <section id="calculator-section" class="small-bubble">
+            <article id="calculator-info">
+                <h2 class="text-center">Calculator Application</h2>
+                <p class="text-center"><strong>Current user: </strong><span id="currentUser"></span></p>
+                <hr>
+                <p><strong>First Number: </strong><span id="firstNumber"></span></p>
+                <p><strong>Second Number: </strong><span id="secondNumber"></span></p>
+                <p><strong>Result: </strong><span id="result"></span></p>
+            </article>
+            <hr>
+            <article id="button-container" class="text-center">
+                <button id="compute-again-btn" class="btn-style" onclick="getUserInput();">Compute New Numbers</button>
+                <br>
+                <button id="change-user-btn" class="btn-style" onclick="welcomeUser();">Change User</button>
+            </article>
+        </section>
+
+
+    </main>
+
+    <!-- Footer giving author and version information -->
+    <footer class="footer-style">
+        <hr>
+        <a href="#page-top"><img src="https://static.thenounproject.com/png/691751-200.png" width="25" height="25"
+                alt="Back to Top icon by Noun Project">&nbsp;Back to Top</a><br>
+        <p class="text-center">
+            Created By: <strong>Timothy Flucker</strong><br>
+            Last Updated On: <strong>11/15/2022</strong><br>
+            Version: <strong>1.0.0</strong>
+        </p>
+    </footer>
+</body>
+
+</html>
