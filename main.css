@@ -160,6 +160,7 @@ img.square-image {
         font-size: x-large;
     }
 
+
     #welcome-content {
         display: block;
         margin: auto;
@@ -189,14 +190,10 @@ img.square-image {
         margin: 1em 0;
         border: 1px solid black;
     }
-
-
 }
 
 /* media query for tablet devices */
 @media (min-width: 768px) and (max-width: 1024px) {
-
-
     h1,
     h2,
     h3,
@@ -261,7 +258,6 @@ img.square-image {
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
-
     section.welcome-content p {
         margin-left: 1em;
         width: 50%;
@@ -270,7 +266,6 @@ img.square-image {
     .margin-right-sm {
         margin-right: 1em;
     }
-
 }
 
 
