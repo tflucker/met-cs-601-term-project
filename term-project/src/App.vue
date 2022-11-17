@@ -15,6 +15,7 @@ const routes = {
   "/skill-showcase": SkillShowcase
 };
 
+// declare other components used in template, any data used on page, and any events
 export default {
   components: {
     HeaderSection, FooterSection
@@ -27,16 +28,13 @@ export default {
     };
   },
   computed: {
-    console: () => console,
     currentView() {
-      window.console.log("Current Path: " + this.currentPath);
       return routes[this.currentPath.slice(1) || "/"] || NotFound;
     },
   },
   mounted() {
     window.addEventListener("hashchange", () => {
       this.currentPath = window.location.hash;
-      window.console.log("New Path: " + this.currentPath);
     });
   },
 };
@@ -44,9 +42,12 @@ export default {
 
 <template>
 
+  <!-- Loads HeaderSection component -->
   <header-section />
+
   <!-- Loads Vue components into this component tag -->
   <component :is="currentView" />
 
+  <!-- Loads FooterSection component, with data -->
   <footer-section :versionNum="versionNum" :lastUpdateDate="lastUpdateDate" />
 </template>
