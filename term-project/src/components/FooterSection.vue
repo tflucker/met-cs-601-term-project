@@ -1,4 +1,12 @@
-<script setup></script>
+<script>
+export default {
+  props: {
+    lastUpdateDate: String,
+    versionNum: String
+  }
+}
+
+</script>
 
 <template>
   <!-- Footer giving author and version information -->
@@ -14,8 +22,8 @@
     ><br />
     <p class="text-center">
       Created By: <strong>Timothy Flucker</strong><br />
-      Last Updated On: <strong>11/17/2022</strong><br />
-      Version: <strong>3.0.1</strong>
+      Last Updated On: <strong>{{ lastUpdateDate }}</strong><br />
+      Version: <strong>{{ versionNum }}</strong>
     </p>
   </footer>
 </template>
