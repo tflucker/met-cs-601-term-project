@@ -11,6 +11,8 @@
         <li><a href="#/" class="active">Home</a></li>
         <li><a href="#/resume">Resume</a></li>
         <li><a href="#/about">About Me</a></li>
+        <li><a href="#/skill-showcase">Skill Showcase</a></li>
+        <li><a href="#/bad-link">Bad Link</a></li>
       </ul>
     </div>
   </header>

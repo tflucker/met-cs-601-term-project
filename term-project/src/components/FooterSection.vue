@@ -14,8 +14,8 @@
     ><br />
     <p class="text-center">
       Created By: <strong>Timothy Flucker</strong><br />
-      Last Updated On: <strong>11/11/2022</strong><br />
-      Version: <strong>2.2.1</strong>
+      Last Updated On: <strong>11/17/2022</strong><br />
+      Version: <strong>3.0.1</strong>
     </p>
   </footer>
 </template>
