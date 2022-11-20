@@ -1,10 +1,10 @@
 <script>
-import Homepage from "./pages/Homepage.vue";
-import AboutMe from "./pages/AboutMe.vue";
-import MyResume from "./pages/MyResume.vue";
-import SkillShowcase from "./pages/SkillShowcase.vue";
-import ContactForm from "./pages/ContactForm.vue";
-import NotFound from "./pages/NotFound.vue";
+import Homepage from "./components/HomePage.vue";
+import AboutMe from "./components/AboutMe.vue";
+import MyResume from "./components/MyResume.vue";
+import SkillShowcase from "./components/SkillShowcase.vue";
+import ContactForm from "./components/ContactForm.vue";
+import NotFound from "./components/NotFound.vue";
 import HeaderSection from "./components/HeaderSection.vue";
 import FooterSection from "./components/FooterSection.vue";
 
