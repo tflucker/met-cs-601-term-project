@@ -31,12 +31,24 @@ function welcomeUser() {
  */
 function calculateNumbers() {
 
-    getUserInput();
-
-    // Requirement 7 - add loop to ask users to continue or not
-    while (confirm("Do you want to add two more numbers?")) {
+    let computeAgain = "yes" 
+    while(computeAgain == "yes"){
         getUserInput();
+
+        // Requirement 7 - loop to ask users to continue or not
+        computeAgain = prompt("Do you want to add two more numbers (yes/no)?").toLowerCase();
+
+        if(computeAgain != "yes" && computeAgain != "no"){
+            alert("Invalid value detected! Ending loop...");
+            computeAgain = "no";
+        }
     }
+
+    // ALTERNATIVE (a little cleaner than code above)
+    // Requirement 7 - add loop to ask users to continue or not
+    // while (confirm("Do you want to add two more numbers?")) {
+    //     getUserInput();
+    // }
     alert("Thank you for using this application!")
 }
 
@@ -54,7 +66,7 @@ function getUserInput() {
 
             // regex to check for any letters (lowercase or uppercase)
             var regex = /^[a-zA-Z]+$/
-            if (input.match(regex)) {
+            if (input == null || input.match(regex)) {
                 throw error;
             }
 
