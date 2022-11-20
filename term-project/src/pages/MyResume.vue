@@ -1,3 +1,10 @@
+<script>
+  export default {
+    data(){
+      return NaN;
+    }
+  }
+</script>
 <template>
   <main id="main-content" class="body-style">
     <section class="page-jumbotron sea-green text-center">

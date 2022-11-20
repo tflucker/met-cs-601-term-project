@@ -1,4 +1,10 @@
-<script setup></script>
+<script>
+  export default {
+    data(){
+      return NaN;
+    }
+  }
+</script>
 
 <template>
   <main id="main-content" class="body-style">

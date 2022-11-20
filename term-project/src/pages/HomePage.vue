@@ -1,3 +1,11 @@
+<script>
+  export default {
+    data(){
+      return NaN;
+    }
+  }
+</script>
+
 <template>
   <main id="main-content" class="body-style">
     <!-- Container for the content on this page. Includes a picture, a video, and some welcome text for the user. -->
