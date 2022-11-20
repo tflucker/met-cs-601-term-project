@@ -113,7 +113,7 @@
           height="250"
         />
         <img
-          src="./../assets/Lincoln2.jpg"
+          src="./../assets/media/Lincoln2.jpg"
           alt="Picture of Lincoln with some flowers"
           srcset="./../assets/media/Lincoln2.jpg"
           width="200"
