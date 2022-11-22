@@ -46,12 +46,12 @@
         <table id="bu-transcript-table" class="text-center center-table">
           <thead>
             <tr>
-              <td colspan="3">Boston University Transcript</td>
+              <th colspan="3">Boston University Transcript</th>
             </tr>
             <tr>
-              <td>Course Number</td>
-              <td>Course Name</td>
-              <td>Grade</td>
+              <th>Course Number</th>
+              <th>Course Name</th>
+              <th>Grade</th>
             </tr>
           </thead>
           <tbody>

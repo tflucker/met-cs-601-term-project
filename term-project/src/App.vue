@@ -25,8 +25,8 @@ export default {
   data() {
     return {
       currentPath: window.location.hash,
-      versionNum: '3.0.1', 
-      lastUpdateDate: '11/17/2022'
+      versionNum: '3.0.4', 
+      lastUpdateDate: '11/2/2022'
     };
   },
   computed: {

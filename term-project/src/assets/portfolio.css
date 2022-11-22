@@ -43,16 +43,31 @@ li a:hover:not(.active) {
 }
 
 .active {
-    background-color: cornflowerblue;
+    background-color: #9FB4C7;
 }
 
+
+/* Table Styles */
 table,
 thead,
 tbody,
 tr,
-td {
+td,
+th {
     border: 1px solid black;
 }
+
+tbody tr:hover {background-color: #9FB4C7;}
+
+table#bu-transcript-table {
+    background-color: white;
+}
+
+thead tr, tr th {
+    background-color: #28587B;
+    color: white;
+}
+
 
 .navbar-style {
     width: auto;
@@ -100,7 +115,7 @@ td {
 }
 
 .sea-green {
-    background-color: darkseagreen;
+    background-color: #9FB798;
 }
 
 .dark-salmon {
@@ -315,3 +330,5 @@ img#web-dev-badges {
     width: 150px;
     height: 100px;
 }
+
+
