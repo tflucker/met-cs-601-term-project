@@ -76,7 +76,7 @@ td {
 
 .body-style {
     padding: 5em 1em 2em 1em;
-    background-image: url("resources/code-background.jpg");
+    background-image: url("media/code-background.jpg");
     /* Original credit for background image */
     /* https://pixabay.com/videos/binary-computer-programming-digital-16714/ */
 }
@@ -294,4 +294,24 @@ img.square-image {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
+}
+
+.standard-dimensions {
+    width: 200px;
+    height: 250px;
+}
+
+.back-to-top-icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+video#welcome-video {
+    width: 400px;
+    height: 250px;
+}
+
+img#web-dev-badges {
+    width: 150px;
+    height: 100px;
 }

@@ -15,8 +15,7 @@ export default {
     <a href="#page-top"
       ><img
         src="https://static.thenounproject.com/png/691751-200.png"
-        width="25"
-        height="25"
+        class="back-to-top-icon"
         alt="Back to Top icon by Noun Project"
       />&nbsp;Back to Top</a
     ><br />

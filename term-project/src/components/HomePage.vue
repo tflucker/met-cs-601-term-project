@@ -1,7 +1,7 @@
 <script>
   export default {
     data(){
-      return NaN;
+      return {};
     }
   }
 </script>
@@ -17,10 +17,8 @@
           <img
             src="./../assets/media/Nice-Profile-Pic.jpg"
             alt="Picture of Timothy Flucker"
-            class="nice-profile-pic"
+            class="nice-profile-pic standard-dimensions"
             srcset="./../assets/media/Nice-Profile-Pic.jpg"
-            width="350"
-            height="450"
           />
           <p>
             This is website serves as a portfolio for me, Timothy Flucker. It
@@ -36,7 +34,7 @@
       <br />
       <article class="text-center">
         <h2 class="section-header-text">Welcome Video</h2>
-        <video id="welcome-video" width="400" height="250" controls>
+        <video id="welcome-video" controls>
           <source
             src="./../assets/media/MET-CS-601-Welcome.mp4"
             type="video/mp4"

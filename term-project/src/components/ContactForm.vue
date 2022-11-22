@@ -75,7 +75,7 @@ export default {
 </script>
 
 <template>
-    <main id="main-content">
+    <main id="main-content" class="body-style">
         <section class="page-jumbotron sea-green">
             <h2 class="text-center">Contact Form</h2>
             <p class="text-center">If you want to get in touch with me please fill out this contact form so that we can

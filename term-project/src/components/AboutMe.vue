@@ -1,9 +1,9 @@
 <script>
-  export default {
-    data(){
-      return NaN;
-    }
+export default {
+  data() {
+    return {};
   }
+}
 </script>
 
 <template>
@@ -11,14 +11,8 @@
     <!-- Container for the content on this page. Includes pictures, a table, and text about my profession and personal life. -->
     <section id="about-me-intro" class="page-jumbotron sea-green text-center">
       <h2 class="section-header-text">About Me - Timothy Flucker</h2>
-      <img
-        src="./../assets/media/Nice-Profile-Pic.jpg"
-        alt="Picture of Timothy Flucker"
-        class="nice-profile-pic"
-        srcset="./../assets/media/Nice-Profile-Pic.jpg"
-        width="200"
-        height="250"
-      />
+      <img src="./../assets/media/Nice-Profile-Pic.jpg" alt="Picture of Timothy Flucker"
+        class="nice-profile-pic standard-dimensions" srcset="./../assets/media/Nice-Profile-Pic.jpg" />
       <p id="about-me-text">
         Hello! Thanks for stopping by to learn more about me! My name is Timothy
         Flucker and I am a developer based out of Washington DC and I currently
@@ -97,34 +91,14 @@
       </p>
 
       <div id="image-container" class="flex-center">
-        <img
-          src="./../assets/media/Nice-Family-Pic.jpg"
-          alt="Picture of Tim, Sydney, and Lincoln"
-          srcset="./../assets/media/Nice-Family-Pic.jpg"
-          width="200"
-          height="250"
-        />
-        <img
-          src="./../assets/media/Nice-Sydney-Pic.jpg"
-          alt="Picture of Sydney"
-          srcset="./../assets/media/Nice-Sydney-Pic.jpg"
-          width="200"
-          height="250"
-        />
-        <img
-          src="./../assets/media/Lincoln1.jpg"
-          alt="Picture of Lincoln with some fun lighting"
-          srcset="./../assets/media/Lincoln1.jpg"
-          width="200"
-          height="250"
-        />
-        <img
-          src="./../assets/media/Lincoln2.jpg"
-          alt="Picture of Lincoln with some flowers"
-          srcset="./../assets/media/Lincoln2.jpg"
-          width="200"
-          height="250"
-        />
+        <img class="standard-dimensions" src="./../assets/media/Nice-Family-Pic.jpg"
+          alt="Picture of Tim, Sydney, and Lincoln" srcset="./../assets/media/Nice-Family-Pic.jpg" />
+        <img class="standard-dimensions" src="./../assets/media/Nice-Sydney-Pic.jpg" alt="Picture of Sydney"
+          srcset="./../assets/media/Nice-Sydney-Pic.jpg" />
+        <img class="standard-dimensions" src="./../assets/media/Lincoln1.jpg"
+          alt="Picture of Lincoln with some fun lighting" srcset="./../assets/media/Lincoln1.jpg" />
+        <img class="standard-dimensions" src="./../assets/media/Lincoln2.jpg" alt="Picture of Lincoln with some flowers"
+          srcset="./../assets/media/Lincoln2.jpg" />
       </div>
 
       <p>
