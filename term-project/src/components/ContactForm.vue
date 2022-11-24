@@ -17,7 +17,8 @@ export default {
                     name: this.contactName,
                     email: this.contactEmail,
                     message: this.contactMessage,
-                    submissionDate: new Date()
+                    submissionDate: new Date(),
+                    requestID: this.generateUUID()
                 }
 
                 document.getElementById("responseViewer").textContent = JSON.stringify(contactFormData, undefined, 2);
@@ -44,7 +45,7 @@ export default {
             // validate email
             // verify value is not null and not blank
             if (this.contactEmail && this.contactEmail.trim() != "") {
-                
+
                 // validate that email matches email pattern (ex. test@gmail.com)
                 let emailRegEx = new RegExp("^[^\s@]+@[^\s@]+\.[^\s@]+$")
                 if (this.contactEmail.match(emailRegEx)) {
@@ -69,6 +70,22 @@ export default {
 
             return (validName && validEmail && validMessage);
 
+        },
+        generateUUID: () => {
+            let
+                d = new Date().getTime(),
+                d2 = (performance && performance.now && (performance.now() * 1000)) || 0;
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+                let r = Math.random() * 16;
+                if (d > 0) {
+                    r = (d + r) % 16 | 0;
+                    d = Math.floor(d / 16);
+                } else {
+                    r = (d2 + r) % 16 | 0;
+                    d2 = Math.floor(d2 / 16);
+                }
+                return (c == 'x' ? r : (r & 0x7 | 0x8)).toString(16);
+            });
         }
     }
 }
@@ -89,7 +106,7 @@ export default {
                     <input type="email" id="contactEmail" name="contactEmail" v-model="contactEmail"
                         placeholder="Ex. jdoe@email.com" required><br>
                     <label for="contactMessage">Message:</label><br>
-                    <textarea id="contactMessage" name="contactMessage" cols="30" rows="10"
+                    <textarea id="contactMessage" name="contactMessage" cols="30" rows="10" class="responsive-textarea"
                         placeholder="This is a really cool site! It should get an A+ !!!" v-model="contactMessage"
                         required></textarea>
                     <br>

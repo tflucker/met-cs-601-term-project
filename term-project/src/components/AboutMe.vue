@@ -29,7 +29,7 @@ export default {
       </p>
     </section>
 
-    <section id="tech-stack-container" class="page-jumbotron dark-khaki">
+    <section id="tech-stack-container" class="page-jumbotron sea-green">
       <h2>Professional Technology Preferences</h2>
       <table>
         <thead>
@@ -75,7 +75,7 @@ export default {
       </table>
     </section>
 
-    <section id="personal-interests" class="page-jumbotron dark-salmon">
+    <section id="personal-interests" class="page-jumbotron sea-green">
       <h2>Personal Interests</h2>
       <p>
         My personal interests are a little nerdy, but they always keep me

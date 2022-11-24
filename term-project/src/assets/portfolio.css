@@ -42,9 +42,12 @@ li a:hover:not(.active) {
     background-color: #111;
 }
 
-.active {
+.active, .cadet-blue {
     background-color: #9FB4C7;
 }
+
+/* Color Palette */
+/* https://coolors.co/eeeeff-7f7caf-9fb4c7-28587b-9fb798 */
 
 
 /* Table Styles */
@@ -59,8 +62,8 @@ th {
 
 tbody tr:hover {background-color: #9FB4C7;}
 
-table#bu-transcript-table {
-    background-color: white;
+table {
+    background-color: #EEEEFF;
 }
 
 thead tr, tr th {
@@ -110,7 +113,7 @@ thead tr, tr th {
 
 .bubble-container {
     padding: 1em;
-    background-color: whitesmoke;
+    background-color: #EEEEFF;
     border-radius: 2em;
 }
 
@@ -118,13 +121,6 @@ thead tr, tr th {
     background-color: #9FB798;
 }
 
-.dark-salmon {
-    background-color: darksalmon;
-}
-
-.dark-khaki {
-    background-color: darkkhaki;
-}
 
 .flex-center {
     display: flex;
@@ -147,15 +143,16 @@ img.square-image {
 #work-experience-section article {
     padding: 1em;
     margin: 1em 0;
+    color: white;
 }
 
 #work-experience-section article:nth-child(odd) {
-    background-color: lightsteelblue;
+    background-color: #7F7CAF;
     border-radius: 2em;
 }
 
 #work-experience-section article:nth-child(even) {
-    background-color: antiquewhite;
+    background-color: #28587B;
     border-radius: 2em;
 }
 
@@ -332,3 +329,7 @@ img#web-dev-badges {
 }
 
 
+textarea {
+    max-width: 100%;
+    box-sizing: border-box;
+}
