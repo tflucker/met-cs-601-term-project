@@ -2,7 +2,7 @@
 import Homepage from "./components/HomePage.vue";
 import AboutMe from "./components/AboutMe.vue";
 import MyResume from "./components/MyResume.vue";
-import SkillShowcase from "./components/SkillShowcase.vue";
+import ClickerGame from "./components/ClickerGame.vue";
 import ContactForm from "./components/ContactForm.vue";
 import NotFound from "./components/NotFound.vue";
 import HeaderSection from "./components/HeaderSection.vue";
@@ -13,7 +13,7 @@ const routes = {
   "/": Homepage,
   "/about": AboutMe,
   "/resume": MyResume,
-  "/skill-showcase": SkillShowcase,
+  "/skill-showcase": ClickerGame,
   "/contactForm": ContactForm
 };
 
@@ -25,8 +25,8 @@ export default {
   data() {
     return {
       currentPath: window.location.hash,
-      versionNum: '3.0.4', 
-      lastUpdateDate: '11/2/2022'
+      versionNum: '3.1.0', 
+      lastUpdateDate: '11/24/2022'
     };
   },
   computed: {
