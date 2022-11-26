@@ -20,7 +20,7 @@ const routes = {
 // declare other components used in template, any data used on page, and any events
 export default {
   components: {
-    Homepage, AboutMe, MyResume, SkillShowcase, ContactForm, HeaderSection, FooterSection
+    Homepage, AboutMe, MyResume, ClickerGame, ContactForm, HeaderSection, FooterSection
   },
   data() {
     return {
