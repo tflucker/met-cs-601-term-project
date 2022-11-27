@@ -2,6 +2,14 @@
 export default {
   data() {
     return {};
+  },
+  mounted: function () {
+    // finds current 'active' navigation element and removes 'active' class
+    const activeElements = document.getElementsByClassName('active');
+    Array.from(activeElements).forEach(el => el.classList.remove('active'));
+    // add active class to current page
+    document.getElementById("aboutMe").classList.add('active');
+
   }
 }
 </script>

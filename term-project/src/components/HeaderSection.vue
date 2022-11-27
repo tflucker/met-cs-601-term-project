@@ -8,12 +8,12 @@
     </div>
     <div id="navbar-links">
       <ul id="top-nav-menu">
-        <li><a href="#/" class="active">Home</a></li>
-        <li><a href="#/resume">Resume</a></li>
-        <li><a href="#/about">About Me</a></li>
-        <li><a href="#/skill-showcase">Skill Showcase</a></li>
-        <li><a href="#/contactForm">Contact Form</a></li>
-        <li><a href="#/bad-link">Bad Link</a></li>
+        <li><a id="homepage" href="#/" class="active">Home</a></li>
+        <li><a id="resume" href="#/resume">Resume</a></li>
+        <li><a id="aboutMe" href="#/about">About Me</a></li>
+        <li><a id="skillShowcase" href="#/skill-showcase">Skill Showcase</a></li>
+        <li><a id="contactForm" href="#/contactForm">Contact Form</a></li>
+        <li><a id="badLink" href="#/bad-link">Bad Link</a></li>
       </ul>
     </div>
   </header>

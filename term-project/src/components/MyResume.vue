@@ -1,9 +1,17 @@
 <script>
-  export default {
-    data(){
-      return NaN;
-    }
+export default {
+  data() {
+    return {};
+  },
+  mounted: function () {
+    // finds current 'active' navigation element and removes 'active' class
+    const activeElements = document.getElementsByClassName('active');
+    Array.from(activeElements).forEach(el => el.classList.remove('active'));
+    // add active class to current page
+    document.getElementById("resume").classList.add('active');
+
   }
+}
 </script>
 <template>
   <main id="main-content" class="body-style">
@@ -23,24 +31,13 @@
           successfully completed with their grades.
         </p>
         <div id="image-container" class="flex-center">
-          <img
-            src="./../assets/media/Trumbull-High-School.jpg"
-            alt="Picture of Trumbull High School Logo"
-            srcset="./../assets/media/Trumbull-High-School.jpg"
-            class="square-image"
-          />
-          <img
-            src="./../assets/media/George_Washington_University_seal.png"
+          <img src="./../assets/media/Trumbull-High-School.jpg" alt="Picture of Trumbull High School Logo"
+            srcset="./../assets/media/Trumbull-High-School.jpg" class="square-image" />
+          <img src="./../assets/media/George_Washington_University_seal.png"
             alt="Picture of the George Washington University seal"
-            srcset="./../assets/media/George_Washington_University_seal.png"
-            class="square-image"
-          />
-          <img
-            src="./../assets/media/Boston-University-seal.png"
-            alt="Picture of the Boston University seal"
-            srcset="./../assets/media/Boston-University-seal.png"
-            class="square-image"
-          />
+            srcset="./../assets/media/George_Washington_University_seal.png" class="square-image" />
+          <img src="./../assets/media/Boston-University-seal.png" alt="Picture of the Boston University seal"
+            srcset="./../assets/media/Boston-University-seal.png" class="square-image" />
         </div>
 
         <table id="bu-transcript-table" class="text-center center-table">
@@ -98,7 +95,7 @@
     </section>
 
     <hr />
-<!-- bubble-container -->
+    <!-- bubble-container -->
     <section id="work-experience-section" class="page-jumbotron sea-green ">
       <h2 class="section-header-text">Work Experience</h2>
       <div id="work-experience-content">
@@ -168,7 +165,7 @@
       <div id="certifications-content">
         <ul>
           <li><strong>AWS Cloud Practitioner</strong>: September 2019 - September
-          2022</li>
+            2022</li>
         </ul>
       </div>
     </section>
@@ -179,22 +176,14 @@
         <p>Below are some links to my professional websites:</p>
         <ul>
           <li>
-            <a
-              href="http://www.linkedin.com/in/timothy-flucker/"
-              target="_blank"
-              >LinkedIn Profile</a
-            >
+            <a href="http://www.linkedin.com/in/timothy-flucker/" target="_blank">LinkedIn Profile</a>
             <span class="italic-text">(Feel free to connect!)</span>
           </li>
           <li>
-            <a href="https://github.com/tflucker" target="_blank"
-              >GitHub Profile</a
-            >
+            <a href="https://github.com/tflucker" target="_blank">GitHub Profile</a>
           </li>
           <li>
-            <a href="https://tflucker.wordpress.com/" target="_blank"
-              >Personal Wordpress Website</a
-            >
+            <a href="https://tflucker.wordpress.com/" target="_blank">Personal Wordpress Website</a>
             <span class="italic-text">(kind of like this assignment, lol)</span>
           </li>
         </ul>

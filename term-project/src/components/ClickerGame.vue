@@ -90,12 +90,11 @@ export default {
             }
             this.data.money = Math.floor(this.data.money - cost);
             this.data.cps = Math.round((this.data.cps + increment) * 1e12) / 1e12;
+            this.data.mps = Math.round((this.data.clickPower * this.data.clickMulti * this.data.cps) * 1e12) / 1e12;
 
             this.upgrades[prop].cost = Math.ceil(cost * 1.5);
             this.upgrades[prop].amount++;
 
-            this.data.cps = Math.round((this.data.cps + 0.1) * 1e12) / 1e12;
-            this.data.mps = Math.round((this.data.clickPower * this.data.clickMulti * this.data.cps) * 1e12) / 1e12;
         }
     },
     computed: {
@@ -107,6 +106,13 @@ export default {
         window.setInterval(() => {
             this.autoClick()
         }, 1000);
+
+        // finds current 'active' navigation element and removes 'active' class
+        const activeElements = document.getElementsByClassName('active');
+        Array.from(activeElements).forEach(el => el.classList.remove('active'));
+        // add active class to current page
+        document.getElementById("skillShowcase").classList.add('active');
+
     }
 }
 </script>

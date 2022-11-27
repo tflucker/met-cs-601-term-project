@@ -1,9 +1,17 @@
 <script>
-  export default {
-    data(){
-      return {};
-    }
+export default {
+  data() {
+    return {};
+  },
+  mounted: function () {
+    // finds current 'active' navigation element and removes 'active' class
+    const activeElements = document.getElementsByClassName('active');
+    Array.from(activeElements).forEach(el => el.classList.remove('active'));
+    // add active class to current page
+    document.getElementById("homepage").classList.add('active');
+
   }
+}
 </script>
 
 <template>
@@ -14,12 +22,8 @@
       <article class="text-center">
         <h2 class="section-header-text">Welcome to my portfolio site!</h2>
         <div class="flex-center">
-          <img
-            src="./../assets/media/Nice-Profile-Pic.jpg"
-            alt="Picture of Timothy Flucker"
-            class="nice-profile-pic standard-dimensions"
-            srcset="./../assets/media/Nice-Profile-Pic.jpg"
-          />
+          <img src="./../assets/media/Nice-Profile-Pic.jpg" alt="Picture of Timothy Flucker"
+            class="nice-profile-pic standard-dimensions" srcset="./../assets/media/Nice-Profile-Pic.jpg" />
           <p>
             This is website serves as a portfolio for me, Timothy Flucker. It
             contains a written version of my resume and links to my professional
@@ -35,10 +39,7 @@
       <article class="text-center">
         <h2 class="section-header-text">Welcome Video</h2>
         <video id="welcome-video" controls>
-          <source
-            src="./../assets/media/MET-CS-601-Welcome.mp4"
-            type="video/mp4"
-          />
+          <source src="./../assets/media/MET-CS-601-Welcome.mp4" type="video/mp4" />
           If you see this, then your browser does not support the video tag.
         </video>
       </article>
