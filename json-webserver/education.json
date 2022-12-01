@@ -1,0 +1,20 @@
+{
+    "my_education": [
+        {
+            "education": {
+                "school": "The George Washington University",
+                "program": "Biomedical Engineering",
+                "type": "BS",
+                "yearConferred": 2014
+            }
+        },
+        {
+            "education": {
+                "school": "Boston University",
+                "program": "Software Development",
+                "type": "MS",
+                "yearConferred": 2023
+            }
+        }
+    ]
+}

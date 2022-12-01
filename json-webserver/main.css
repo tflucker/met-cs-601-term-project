@@ -1,0 +1,123 @@
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+
+.page-jumbotron {
+    margin: 1em 10em;
+    padding: 3em 3em;
+    border-radius: 2em;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+.three-quarter-width {
+    width: 75%;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.display-table {
+    display: table;
+}
+
+
+
+.sea-green {
+    background-color: darkseagreen;
+}
+
+.success-style {
+    background-color: green;
+    border-radius: 2em;
+    padding: 1em;
+}
+
+.failure-style {
+    background-color: lightcoral;
+    border-radius: 2em;
+    padding: 1em;
+}
+
+.body-style {
+    padding: 5em 1em 2em 1em;
+}
+
+.footer-style {
+    background-color: lightgray;
+    padding: 0em 0.5em 0.5em 1em;
+    margin-top: 1em;
+}
+
+.back-to-top-icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/** Reference - https://www.w3schools.com/howto/howto_css_block_buttons.asp **/
+.btn-style {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #7a7cf7;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 2em;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-weight: normal;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip img {
+    height: 1em;
+    width: 1em;
+    border-radius: 8em;
+}
+
+.bold-label {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    place-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}

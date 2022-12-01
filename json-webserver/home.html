@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 - JSON Fetch</title>
+    <meta name="description" content="MET CS 601 Assignment 5, Creating a JSON document and then using fetch to retrieve data">
+
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <main id="main-content" class="page-jumbotron sea-green">
+        <section id="practiceForm-section" class="centered three-quarter-width">
+
+            <button type="button" id="fetchDataBtn" onclick="makeRequest('https://pokeapi.co/api/v2/pokemon/1')">Get Data</button>
+
+            <article id="formSubmissionView">
+                <h2 class="text-center">Contact Form Response</h2>
+                <pre id="responseViewer" class="flex-center">Waiting for form submission ...</pre>
+            </article>
+        </section>
+    </main>
+    <!-- Footer giving author and version information -->
+    <footer class="footer-style">
+        <hr>
+        <a href="#page-top"><img src="https://static.thenounproject.com/png/691751-200.png" class="back-to-top-icon"
+                alt="Back to Top icon by Noun Project">&nbsp;Back to Top</a><br>
+        <p class="text-center">
+            Created By: <strong>Timothy Flucker</strong><br>
+            Last Updated On: <strong>11/28/2022</strong><br>
+            Version: <strong>1.0.0</strong>
+        </p>
+    </footer>
+</body>
+
+</html>
