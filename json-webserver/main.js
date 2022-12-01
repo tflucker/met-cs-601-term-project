@@ -25,10 +25,10 @@ function makeRequest(url){
 
     }).then((json) => {
         console.log(json);
-        document.getElementById("responseViewer").innerHTML = json;
+        document.getElementById("responseViewer").textContent = JSON.stringify(json, undefined, 2);
     })
     .catch((error) => {
-        document.getElementById("responseViewer").innerHTML = "An error has occurred. Please try again.";
+        document.getElementById("responseViewer").textContent = "An error has occurred. Please try again.";
         console.error(error);
     })
 }
