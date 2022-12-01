@@ -25,7 +25,7 @@ function makeRequest(url){
 
     }).then((json) => {
         console.log(json);
-        document.getElementById("responseViewer").innerHTML = response.json;
+        document.getElementById("responseViewer").innerHTML = json;
     })
     .catch((error) => {
         document.getElementById("responseViewer").innerHTML = "An error has occurred. Please try again.";
