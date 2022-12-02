@@ -31,8 +31,8 @@ function makeRequest(url, type){
             let index = new Number(document.getElementById("jsonIndex").value.trim());
             let data = {};
             // if provided index value is out-of-bounds, then throw error.
-            if(index.valueOf() == NaN || index > json.my_education.length - 1){
-                document.getElementById("fetchStatus").innerHTML += "WITH ERROR";
+            if(isNaN(index) || index > json.my_education.length - 1){
+                document.getElementById("fetchStatus").innerHTML += " WITH ERROR";
                 throw new Error("Invalid value provided.  Please provide values between 0 and " + new String(json.my_education.length - 1) + "(max index of data).");
             } else {
                 // if valid return object at provided index
