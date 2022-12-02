@@ -6,21 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 5 - JSON Fetch</title>
-    <meta name="description" content="MET CS 601 Assignment 5, Creating a JSON document and then using fetch to retrieve data">
+    <meta name="description"
+        content="MET CS 601 Assignment 5, Creating a JSON document and then using fetch to retrieve data">
 
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
 </head>
 
 <body>
-
+    <header id="navbar-container" class="navbar-style">
+        <div id="header-title-container" class="gradient-background">
+          <h1 id="header-title">Assignment 5 - Timothy Flucker</h1>
+          <h3>Practice with JSON documents and the Fetch</h3>
+        </div>
+      </header>
     <main id="main-content" class="page-jumbotron sea-green">
         <section id="practiceForm-section" class="centered three-quarter-width">
+            <article>
+                <h3 class="text-center">Assignment Overview</h3>
+                <div class="flex-center">
+                    <p>This assignment was practice working with JSON documents and the 'Fetch' native Javascript functionality. The data is available <a href="/education.json" target="_blank">here</a> and contains my college education history. This page has two functions: </p>
+                    <ul>
+                        <li>Get All Data - retrieves entire JSON document and prints it to the DOM in the 'Fetch Response' section.</li>
+                        <li>Get Data By Index - retrieves a particular item in the JSON document based on the provided value in the 'JSON Object Index' input field.</li>
+                        <ul>
+                            <li>If found - the specific JSON object is printed to the DOM in the 'Fetch Response' section.</li>
+                            <li>If not found - a generic error is printed to the DOM in the 'Fetch Response' section.</li>
+                        </ul>
+                    </ul>
+                    <p>If there is an error with the Fetch request or if some invalid input is provided, then a generic error is printed to the 'Fetch Response' section. This section also has a status indicator that will show the success/failure of the Fetch request.</p>
+                </div>
 
-            <button type="button" id="fetchDataBtn" onclick="makeRequest('./education.json')">Get Data</button>
-
+            </article>
+            <br><hr><br>
+            <article>
+                <h3 class="text-center">Get All Data</h3>
+                <div class="flex-center">
+                    <button type="button" id="fetchAllBtn" onclick="makeRequest('./education.json', 'findAll')">Get All
+                        Data</button>
+                </div>
+            </article>
+            <br><hr><br>
+            <article>
+                <h3 class="text-center">Get Data By Index</h3>
+                <div class="flex-center">
+                    <label for="jsonIndex">JSON Object Index:</label>
+                    <input type="text" placeholder="Ex. 1" id="jsonIndex">
+                    <button type="button" id="fetchByIndexBtn" onclick="makeRequest('./education.json', 'findByIndex')">Get
+                        Data By Index</button>
+                </div>
+            </article>
+            <br><hr><br>
             <article id="formSubmissionView">
                 <h2 class="text-center">Contact Form Response</h2>
+                <h4 class="text-center">Fetch Status - <span id="fetchStatus">PENDING</span></h4>
                 <pre id="responseViewer" class="flex-center">Waiting for form submission ...</pre>
             </article>
         </section>

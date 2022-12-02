@@ -113,6 +113,17 @@
     display: none;
 }
 
+h1,
+h2,
+h3,
+p,
+a,
+label, 
+li, 
+pre {
+    font-size: x-large;
+}
+
 .flex-center {
     display: flex;
     align-items: center;
@@ -120,4 +131,14 @@
     place-content: center;
     flex-wrap: wrap;
     justify-content: center;
+    column-gap: 1em;
+}
+
+.navbar-style div#header-title-container {
+    padding: 0.5em;
+}
+
+.gradient-background {
+    background: rgb(26, 188, 156);
+    background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
 }
