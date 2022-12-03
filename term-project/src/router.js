@@ -24,12 +24,12 @@ const routes = [
 {
     path: "/contactForm",
     alias: "/contactForm",
-    name: "contact-form-add",
+    name: "contactForm",
     component: () => import("./components/ContactForm.vue")
 },
 {
     path: "/form-submit-success",
-    name: "contact-form-success",
+    name: "form-submit-success",
     component: () => import("./components/FormSubmission.vue")
 },
 {
