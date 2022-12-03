@@ -1,7 +1,41 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      retrievedQuote: false
+    };
+  },
+  methods: {
+    async getInspirationalQuote() {
+      const API_KEY = "QMIlNvt6Zc79ZSbOgrCRBQ==BJaWG86bga5jbDU5";
+      const API_URL = "https://api.api-ninjas.com/v1/quotes"
+
+      await fetch(API_URL, {
+        method: "GET",
+        headers: {
+          "X-Api-Key": API_KEY,
+          "Content-Type": "application/json"
+        }
+      }).then((response) => {
+        if (response.ok) {
+          console.log("Success!")
+          return response.json();
+        } else {
+          throw new Error("ERROR: Unable to retrieve inspirational quote!")
+        }
+      }).then((json) => {
+        retrievedQuote = true;
+        console.log("Quote: " + JSON.stringify(json, undefined, 2));
+
+        document.getElementById("quote-text").innerHTML = json[0].quote;
+        document.getElementById("quote-author").innerHTML = json[0].author;
+      })
+
+        .catch((error) => {
+          console.log(error.message);
+          retrievedQuote = false;
+        });
+    }
   },
   mounted: function () {
     // finds current 'active' navigation element and removes 'active' class
@@ -9,6 +43,8 @@ export default {
     Array.from(activeElements).forEach(el => el.classList.remove('active'));
     // add active class to current page
     document.getElementById("homepage").classList.add('active');
+
+    this.getInspirationalQuote();
 
   }
 }
@@ -32,6 +68,14 @@ export default {
             decided to visit this website and learn more about me. Please feel
             free to report any bugs to my
             <a href="mailto:tflucker@bu.edu">email</a>.
+          </p>
+        </div>
+        <div id="quote-container" class="flex-center" v-if="retrievedQuote">
+          <p>Inspirational Quotes are generated from the <a href="https://api-ninjas.com/api/quotes" target="_blank">API
+              Ninja 'Quotes API'</a>.Only 10 requests are allowed per day.</p><br>
+          <p>
+            <strong>Quote: </strong><span id="quote-text"></span><br>
+            <strong>Author: </strong><span id="quote-author"></span>
           </p>
         </div>
       </article>

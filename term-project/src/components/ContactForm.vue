@@ -26,7 +26,7 @@ export default {
 
                 this.contactForm.UID = this.generateUUID();
                 this.contactForm.submissionDate = new Date();
-                
+
                 axios.post("/",
                     this.encode({
                         "form-name": "contactMeFormSubmission",
@@ -139,8 +139,8 @@ export default {
                     data-netlify-recaptcha="true" data-netlify-honeypot="bot-field" @submit.prevent="submitContactForm">
                     <!-- @submit.prevent="submitContactForm" -->
                     <input type="hidden" name="form-name" value="contactMeFormSubmission" />
-                    <input type="hidden" id="formSubmitDate" name="formSubmitDate" value="" />
-                    <input type="hidden" id="formUUID" name="formUUID" value="" />
+                    <input type="hidden" id="formSubmitDate" name="formSubmitDate" v-model="contactForm.submissionDate" />
+                    <input type="hidden" id="formUUID" name="formUUID" v-model="contactForm.UID" />
                     <label for="contactName">Name:</label><br>
                     <input type="text" id="contactName" name="contactName" v-model="contactForm.contactName"
                         placeholder="Ex. John Doe" required><br><br>
