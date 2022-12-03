@@ -1,8 +1,7 @@
 <!-- Hidden form because Netifly can't properly process the form in the Vue component -->
-<form name="contactMeFormSubmission" method="POST" netlify data-netlify-recaptcha="true" netlify-honeypot="bot-field"
+<form name="contactMeFormSubmission" netlify netlify-honeypot="bot-field"
     hidden>
     <input type="text" name="contactName" />
     <input type="email" name="contactEmail" />
     <textarea name="contactMessage"></textarea>
-    <div data-netlify-recaptcha="true"></div>
 </form>
