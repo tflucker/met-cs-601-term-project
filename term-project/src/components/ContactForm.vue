@@ -53,7 +53,8 @@ export default {
                     // body: this.encode({
                     //     "form-name": event.target.getAttribute("contactName"),
                     // }),
-                    body: new URLSearchParams(formData).toString()
+                    // body: new URLSearchParams(formData).toString()
+                    body: formData
                 })
                     .then(() => {
                         console.log("Form Successfully submitted!");
