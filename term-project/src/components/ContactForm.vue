@@ -1,4 +1,7 @@
 <script>
+
+import axios from "axios";
+
 export default {
     name: "add-contact-form",
     data() {
@@ -16,7 +19,7 @@ export default {
     },
     methods: {
 
-        async submitContactForm(event) {
+        submitContactForm(event) {
             event.preventDefault();
             // validate content, if true save data else do not save data
             if (this.validateForm()) {
@@ -46,25 +49,45 @@ export default {
                 console.log("Form Data: " + formData);
                 console.log("Form Data: " + JSON.stringify(formData));
 
-                await fetch("/", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    // body: this.encode({
-                    //     "form-name": event.target.getAttribute("contactName"),
-                
-                    // }),
-                    // body: new URLSearchParams(formData).toString()
-                    body: formData
+
+                axios.post("/",
+                    this.encode({
+                        "form-name": contactMeFormSubmission,
+                        "contactName": event.target.getAttribute("contactName"),
+                        "contactEmail": event.target.getAttribute("contactEmail"),
+                        "contactMessage": event.target.getAttribute("contactMessage"),
+                    }),
+                    { header: { "Content-Type": "application/x-www-form-urlencoded" } }
+                ).then(() => {
+                    console.log("Form Successfully submitted!");
+                    // document.getElementById("responseViewer").textContent = JSON.stringify(contactFormData, undefined, 2);
+                    alert('Submission Received!');
+                    this.submitted = true;
                 })
-                    .then(() => {
-                        console.log("Form Successfully submitted!");
-                        // document.getElementById("responseViewer").textContent = JSON.stringify(contactFormData, undefined, 2);
-                        alert('Submission Received!');
-                        this.submitted = true;
-                    })
                     .catch((error) => {
                         alert(error);
                     });
+
+
+                // await fetch("/", {
+                //     method: "POST",
+                //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                //     // body: this.encode({
+                //     //     "form-name": event.target.getAttribute("contactName"),
+
+                //     // }),
+                //     // body: new URLSearchParams(formData).toString()
+                //     body: formData
+                // })
+                //     .then(() => {
+                //         console.log("Form Successfully submitted!");
+                //         // document.getElementById("responseViewer").textContent = JSON.stringify(contactFormData, undefined, 2);
+                //         alert('Submission Received!');
+                //         this.submitted = true;
+                //     })
+                //     .catch((error) => {
+                //         alert(error);
+                //     });
                 // reset values in form
                 this.clearForm();
             } else {
@@ -158,7 +181,9 @@ export default {
             <p class="text-center">If you want to get in touch with me please fill out this contact form so that we can
                 connect!</p>
             <article id="contactMeFormContainer" class="flex-center">
-                <form name="contactMeFormSubmission" method="POST" action="/form-submit-success" data-netlify="true" netlify data-netlify-recaptcha="true" @submit.prevent="submitContactForm">
+                <form name="contactMeFormSubmission" method="POST" action="/form-submit-success" data-netlify="true"
+                    netlify data-netlify-recaptcha="true" data-netlify-honeypot="bot-field"
+                    @submit.prevent="submitContactForm">
                     <!-- @submit.prevent="submitContactForm" -->
                     <input type="hidden" name="form-name" value="contactMeFormSubmission" />
                     <!-- <input type="hidden" id="formSubmitDate" name="formSubmitDate" value="" />
@@ -177,7 +202,7 @@ export default {
                     <div data-netlify-recaptcha="true"></div>
                     <div class="flex-center">
                         <button type="button" class="btn-style" @click="clearForm">Clear Form</button>&nbsp;&nbsp;
-                        <button type="submit" class="btn-style" >Submit</button>
+                        <button type="submit" class="btn-style">Submit</button>
                         <!-- @click.prevent="submitContactForm" -->
                     </div>
 
