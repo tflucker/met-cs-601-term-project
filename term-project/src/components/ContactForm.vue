@@ -17,7 +17,7 @@ export default {
     methods: {
 
         submitContactForm(event) {
-
+            event.preventDefault();
             // validate content, if true save data else do not save data
             if (this.validateForm()) {
                 const contactFormData = {
@@ -38,8 +38,8 @@ export default {
                 submittedForm.getAttribute("")
 
                 const formData = new FormData(submittedForm);
-
-                fetch("/contactForm", {
+                console.log("Form Data: " + JSON.stringify(formData));
+                fetch("/", {
                     method: "POST",
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
                     body: new URLSearchParams(formData).toString()
@@ -143,7 +143,7 @@ export default {
             <p class="text-center">If you want to get in touch with me please fill out this contact form so that we can
                 connect!</p>
             <article id="contactMeFormContainer" class="flex-center">
-                <form name="contactMeFormSubmission" method="POST" data-netlify="true" action="POST" data-netlify-recaptcha="true">
+                <form name="contactMeFormSubmission" method="POST" data-netlify="true" action="/" data-netlify-recaptcha="true" @submit.prevent="submitContactForm">
                     <!-- @submit.prevent="submitContactForm" -->
                     <input type="hidden" id="formSubmitDate" name="formSubmitDate" value="" />
                     <input type="hidden" id="formUUID" name="formUUID" value="" />
@@ -161,7 +161,7 @@ export default {
                     <div data-netlify-recaptcha="true"></div>
                     <div class="flex-center">
                         <button type="button" class="btn-style" @click="clearForm">Clear Form</button>&nbsp;&nbsp;
-                        <button type="submit" class="btn-style" @click="submitContactForm">Submit</button>
+                        <button type="submit" class="btn-style">Submit</button>
                     </div>
 
                 </form>
