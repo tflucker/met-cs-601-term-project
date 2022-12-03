@@ -30,8 +30,8 @@ export default {
                     }
                 }
 
-                event.target[1].value = new Date();
-                event.target[2].value = this.generateUUID();
+                event.target[0].value = new Date();
+                event.target[1].value = this.generateUUID();
 
                 const submittedForm = event.target;
 
@@ -39,7 +39,7 @@ export default {
 
                 const formData = new FormData(submittedForm);
 
-                fetch("/", {
+                fetch("/contactForm", {
                     method: "POST",
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
                     body: new URLSearchParams(formData).toString()
@@ -143,9 +143,8 @@ export default {
             <p class="text-center">If you want to get in touch with me please fill out this contact form so that we can
                 connect!</p>
             <article id="contactMeForm" class="flex-center">
-                <form name="contactForm" method="POST" action="#" data-netlify="true"
-                    @submit.prevent="submitContactForm">
-                    <input type="hidden" name="form-name" value="contactForm" />
+                <form name="contactForm" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                    <!-- @submit.prevent="submitContactForm" -->
                     <input type="hidden" id="formSubmitDate" name="formSubmitDate" value="" />
                     <input type="hidden" id="formUUID" name="formUUID" value="" />
                     <label for="contactName">Name:</label><br>
@@ -161,7 +160,7 @@ export default {
                     <br><br>
                     <div class="flex-center">
                         <button type="button" class="btn-style" @click="clearForm">Clear Form</button>&nbsp;&nbsp;
-                        <button type="submit" class="btn-style">Submit</button>
+                        <button type="submit" class="btn-style" @click="submitContactForm">Submit</button>
                     </div>
 
                 </form>
