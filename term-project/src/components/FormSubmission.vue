@@ -1,3 +1,4 @@
+<script setup></script>
 <template>
     <main id="main-content" class="body-style">
         <section id="formSubmissionView" class="page-jumbotron sea-green">
@@ -5,9 +6,9 @@
             <p class="text-center">Thank you for submitting this contact form! Please click the button if you would like
                 to submit another form.</p>
             <div class="flex-center">
-                <button type="button" class="btn-style">
-                    <router-link id="contactForm" to="/contactForm">New Form</router-link>
-                </button>
+                <router-link id="contactForm" to="/contactForm">
+                    <button type="button" class="btn-style">New Form</button>
+                </router-link>
             </div>
         </section>
     </main>

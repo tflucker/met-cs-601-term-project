@@ -30,12 +30,10 @@ export default {
                     }
                 }
 
-                event.target[1].value = new Date();
-                event.target[2].value = this.generateUUID();
+                // event.target[1].value = new Date();
+                // event.target[2].value = this.generateUUID();
 
-                const submittedForm = event.target;
-
-                submittedForm.getAttribute("")
+                // const submittedForm = event.target;
 
                 let formData = new FormData();
                 formData.append('contactName', this.contactForm.contactName);
@@ -45,8 +43,9 @@ export default {
                 formData.append('submissionDate', new Date());
                 formData.append('form-name', "contactMeFormSubmission");
 
-
+                console.log("Form Data: " + formData);
                 console.log("Form Data: " + JSON.stringify(formData));
+
                 await fetch("/", {
                     method: "POST",
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -158,7 +157,7 @@ export default {
             <p class="text-center">If you want to get in touch with me please fill out this contact form so that we can
                 connect!</p>
             <article id="contactMeFormContainer" class="flex-center">
-                <form name="contactMeFormSubmission" method="POST" action="/form-submit-success" data-netlify="true" data-netlify-recaptcha="true">
+                <form name="contactMeFormSubmission" method="POST" action="/form-submit-success" data-netlify="true" data-netlify-recaptcha="true" @submit.prevent="submitContactForm">
                     <!-- @submit.prevent="submitContactForm" -->
                     <input type="hidden" name="form-name" value="contactMeFormSubmission" />
                     <input type="hidden" id="formSubmitDate" name="formSubmitDate" value="" />
@@ -177,7 +176,8 @@ export default {
                     <div data-netlify-recaptcha="true"></div>
                     <div class="flex-center">
                         <button type="button" class="btn-style" @click="clearForm">Clear Form</button>&nbsp;&nbsp;
-                        <button type="submit" class="btn-style" @click.prevent="submitContactForm">Submit</button>
+                        <button type="submit" class="btn-style" >Submit</button>
+                        <!-- @click.prevent="submitContactForm" -->
                     </div>
 
                 </form>
