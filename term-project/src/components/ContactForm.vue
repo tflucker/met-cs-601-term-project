@@ -158,7 +158,7 @@ export default {
             <p class="text-center">If you want to get in touch with me please fill out this contact form so that we can
                 connect!</p>
             <article id="contactMeFormContainer" class="flex-center">
-                <form name="contactMeFormSubmission" method="POST" action="/form-submit-success" data-netlify="true" data-netlify-recaptcha="true" @submit.prevent="submitContactForm">
+                <form name="contactMeFormSubmission" method="POST" action="/form-submit-success" data-netlify="true" netlify data-netlify-recaptcha="true" @submit.prevent="submitContactForm">
                     <!-- @submit.prevent="submitContactForm" -->
                     <input type="hidden" name="form-name" value="contactMeFormSubmission" />
                     <!-- <input type="hidden" id="formSubmitDate" name="formSubmitDate" value="" />
