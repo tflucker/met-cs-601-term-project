@@ -7,7 +7,7 @@ export default {
     data() {
         return {
             contactForm: {
-                id: null,
+                UID: null,
                 contactName: '',
                 contactEmail: '',
                 contactMessage: '',
@@ -23,6 +23,10 @@ export default {
             event.preventDefault();
             // validate content, if true save data else do not save data
             if (this.validateForm()) {
+
+                this.contactForm.UID = this.generateUUID();
+                this.contactForm.submissionDate = new Date();
+                
                 axios.post("/",
                     this.encode({
                         "form-name": "contactMeFormSubmission",
