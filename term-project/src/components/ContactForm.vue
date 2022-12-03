@@ -52,10 +52,11 @@ export default {
 
                 axios.post("/",
                     this.encode({
-                        "form-name": contactMeFormSubmission,
-                        "contactName": event.target.getAttribute("contactName"),
-                        "contactEmail": event.target.getAttribute("contactEmail"),
-                        "contactMessage": event.target.getAttribute("contactMessage"),
+                        "form-name": "contactMeFormSubmission",
+                        ...this.contactForm
+                        // "contactName": event.target.getAttribute("contactName"),
+                        // "contactEmail": event.target.getAttribute("contactEmail"),
+                        // "contactMessage": event.target.getAttribute("contactMessage"),
                     }),
                     { header: { "Content-Type": "application/x-www-form-urlencoded" } }
                 ).then(() => {
