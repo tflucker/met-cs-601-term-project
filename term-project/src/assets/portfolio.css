@@ -102,7 +102,7 @@ thead tr, tr th {
 .footer-style {
     background-color: lightgray;
     padding: 0em 0.5em 0.5em 1em;
-    margin-top: 1em;
+    margin-top: -2em;
 }
 
 .page-jumbotron {
@@ -121,6 +121,18 @@ thead tr, tr th {
     background-color: #9FB798;
 }
 
+
+/** Reference - https://www.w3schools.com/howto/howto_css_block_buttons.asp **/
+.btn-style {
+    display: block;
+    border: none;
+    background-color: #7F7CAF;
+    padding: 0.5em 1em;
+    font-size: large;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 2em;
+}
 
 .flex-center {
     display: flex;

@@ -8,12 +8,13 @@
     </div>
     <div id="navbar-links">
       <ul id="top-nav-menu">
-        <li><a id="homepage" href="#/" class="active">Home</a></li>
-        <li><a id="resume" href="#/resume">Resume</a></li>
-        <li><a id="aboutMe" href="#/about">About Me</a></li>
-        <li><a id="skillShowcase" href="#/skill-showcase">Skill Showcase</a></li>
-        <li><a id="contactForm" href="#/contactForm">Contact Form</a></li>
-        <li><a id="badLink" href="#/bad-link">Bad Link</a></li>
+        <li><router-link id="homepage" to="/">Home</router-link></li>
+        <li><router-link id="resume" to="/resume">Resume</router-link></li>
+        <li><router-link id="aboutMe" to="/aboutMe">About Me</router-link></li>
+        <li><router-link id="skillShowcase" to="/skill-showcase">Skill Showcase</router-link></li>
+        <li><router-link id="contactForm" to="/contactForm">Contact Form</router-link></li>
+        <li><router-link id="badLink" to="/bad-link">Bad Link</router-link></li>
+
       </ul>
     </div>
   </header>
