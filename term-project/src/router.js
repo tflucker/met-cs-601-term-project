@@ -28,11 +28,6 @@ const routes = [
     component: () => import("./components/ContactForm.vue")
 },
 {
-    path: "/form-submit-success",
-    name: "form-submit-success",
-    component: () => import("./components/FormSubmission.vue")
-},
-{
     // default router, handles 404 errors
     path: "/:pathMatch(.*)*",
     component: () => import("./components/NotFound.vue")
