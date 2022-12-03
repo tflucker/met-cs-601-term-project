@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      retrievedQuote: false
+      retrievedQuote: true
     };
   },
   methods: {
@@ -10,7 +10,7 @@ export default {
       const API_KEY = "QMIlNvt6Zc79ZSbOgrCRBQ==BJaWG86bga5jbDU5";
       const API_URL = "https://api.api-ninjas.com/v1/quotes"
 
-      await fetch(API_URL, {
+      return await fetch(API_URL, {
         method: "GET",
         headers: {
           "X-Api-Key": API_KEY,
@@ -23,18 +23,7 @@ export default {
         } else {
           throw new Error("ERROR: Unable to retrieve inspirational quote!")
         }
-      }).then((json) => {
-        this.retrievedQuote = true;
-        console.log("Quote: " + JSON.stringify(json, undefined, 2));
-
-        document.getElementById("quote-text").innerHTML = json[0].quote;
-        document.getElementById("quote-author").innerHTML = json[0].author;
-      })
-
-        .catch((error) => {
-          console.log(error.message);
-          this.retrievedQuote = false;
-        });
+      });
     }
   },
   mounted: function () {
@@ -44,8 +33,17 @@ export default {
     // add active class to current page
     document.getElementById("homepage").classList.add('active');
 
-    this.getInspirationalQuote();
-
+    this.getInspirationalQuote()
+      .then((json) => {
+        this.retrievedQuote = true;
+        console.log("Quote: " + JSON.stringify(json, undefined, 2));
+        document.getElementById("quote-text").innerHTML = json[0].quote;
+          document.getElementById("quote-author").innerHTML = json[0].author;
+      })
+      .catch((error) => {
+        console.log(error.message);
+        this.retrievedQuote = false;
+      });
   }
 }
 </script>
