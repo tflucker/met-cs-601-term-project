@@ -39,8 +39,8 @@ export default {
                 formData.append('contactName', this.contactForm.contactName);
                 formData.append('contactEmail', this.contactForm.contactName);
                 formData.append('contactMessage', this.contactForm.contactName);
-                formData.append('contactUUID', this.generateUUID());
-                formData.append('submissionDate', new Date());
+                // formData.append('contactUUID', this.generateUUID());
+                // formData.append('submissionDate', new Date());
                 formData.append('form-name', "contactMeFormSubmission");
 
                 console.log("Form Data: " + formData);
@@ -51,6 +51,7 @@ export default {
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
                     // body: this.encode({
                     //     "form-name": event.target.getAttribute("contactName"),
+                
                     // }),
                     // body: new URLSearchParams(formData).toString()
                     body: formData
@@ -157,11 +158,11 @@ export default {
             <p class="text-center">If you want to get in touch with me please fill out this contact form so that we can
                 connect!</p>
             <article id="contactMeFormContainer" class="flex-center">
-                <form name="contactMeFormSubmission" method="POST" action="/form-submit-success" data-netlify="true" data-netlify-recaptcha="true" @submit.prevent="submitContactForm">
+                <form name="contactMeFormSubmission" action="/form-submit-success" data-netlify="true" data-netlify-recaptcha="true" @submit.prevent="submitContactForm">
                     <!-- @submit.prevent="submitContactForm" -->
                     <input type="hidden" name="form-name" value="contactMeFormSubmission" />
-                    <input type="hidden" id="formSubmitDate" name="formSubmitDate" value="" />
-                    <input type="hidden" id="formUUID" name="formUUID" value="" />
+                    <!-- <input type="hidden" id="formSubmitDate" name="formSubmitDate" value="" />
+                    <input type="hidden" id="formUUID" name="formUUID" value="" /> -->
                     <label for="contactName">Name:</label><br>
                     <input type="text" id="contactName" name="contactName" v-model="contactForm.contactName"
                         placeholder="Ex. John Doe" required><br><br>
