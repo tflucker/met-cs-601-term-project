@@ -24,7 +24,7 @@ export default {
           throw new Error("ERROR: Unable to retrieve inspirational quote!")
         }
       }).then((json) => {
-        retrievedQuote = true;
+        this.retrievedQuote = true;
         console.log("Quote: " + JSON.stringify(json, undefined, 2));
 
         document.getElementById("quote-text").innerHTML = json[0].quote;
@@ -33,7 +33,7 @@ export default {
 
         .catch((error) => {
           console.log(error.message);
-          retrievedQuote = false;
+          this.retrievedQuote = false;
         });
     }
   },
