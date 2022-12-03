@@ -16,7 +16,7 @@ export default {
     },
     methods: {
 
-        submitContactForm(event) {
+        async submitContactForm(event) {
             event.preventDefault();
             // validate content, if true save data else do not save data
             if (this.validateForm()) {
@@ -37,11 +37,22 @@ export default {
 
                 submittedForm.getAttribute("")
 
-                const formData = new FormData(submittedForm);
+                let formData = new FormData();
+                formData.append('contactName', this.contactForm.contactName);
+                formData.append('contactEmail', this.contactForm.contactName);
+                formData.append('contactMessage', this.contactForm.contactName);
+                formData.append('contactUUID', this.generateUUID());
+                formData.append('submissionDate', new Date());
+                formData.append('form-name', "contactMeFormSubmission");
+
+
                 console.log("Form Data: " + JSON.stringify(formData));
-                fetch("/", {
+                await fetch("/", {
                     method: "POST",
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    // body: this.encode({
+                    //     "form-name": event.target.getAttribute("contactName"),
+                    // }),
                     body: new URLSearchParams(formData).toString()
                 })
                     .then(() => {
@@ -58,6 +69,9 @@ export default {
             } else {
                 alert(this.errorMessages);
             }
+        },
+        encode(data) {
+            return Object.keys(data).map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&");
         },
         clearForm() {
             this.contactForm.contactName = '';
@@ -143,8 +157,9 @@ export default {
             <p class="text-center">If you want to get in touch with me please fill out this contact form so that we can
                 connect!</p>
             <article id="contactMeFormContainer" class="flex-center">
-                <form name="contactMeFormSubmission" method="POST" data-netlify="true" action="/" data-netlify-recaptcha="true" @submit.prevent="submitContactForm">
+                <form name="contactMeFormSubmission" method="POST" action="/form-submit-success" data-netlify="true" data-netlify-recaptcha="true">
                     <!-- @submit.prevent="submitContactForm" -->
+                    <input type="hidden" name="form-name" value="contactMeFormSubmission" />
                     <input type="hidden" id="formSubmitDate" name="formSubmitDate" value="" />
                     <input type="hidden" id="formUUID" name="formUUID" value="" />
                     <label for="contactName">Name:</label><br>
@@ -161,7 +176,7 @@ export default {
                     <div data-netlify-recaptcha="true"></div>
                     <div class="flex-center">
                         <button type="button" class="btn-style" @click="clearForm">Clear Form</button>&nbsp;&nbsp;
-                        <button type="submit" class="btn-style">Submit</button>
+                        <button type="submit" class="btn-style" @click.prevent="submitContactForm">Submit</button>
                     </div>
 
                 </form>
