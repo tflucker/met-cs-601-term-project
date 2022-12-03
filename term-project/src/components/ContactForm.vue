@@ -30,8 +30,8 @@ export default {
                     }
                 }
 
-                event.target[0].value = new Date();
-                event.target[1].value = this.generateUUID();
+                event.target[1].value = new Date();
+                event.target[2].value = this.generateUUID();
 
                 const submittedForm = event.target;
 
@@ -142,7 +142,7 @@ export default {
             <h2 class="text-center">Contact Form</h2>
             <p class="text-center">If you want to get in touch with me please fill out this contact form so that we can
                 connect!</p>
-            <article id="contactMeForm" class="flex-center">
+            <article id="contactMeFormContainer" class="flex-center">
                 <form name="contactMeFormSubmission" method="POST" data-netlify="true" data-netlify-recaptcha="true">
                     <!-- @submit.prevent="submitContactForm" -->
                     <input type="hidden" id="formSubmitDate" name="formSubmitDate" value="" />
@@ -158,6 +158,7 @@ export default {
                         placeholder="This is a really cool site! It should get an A+ !!!"
                         v-model="contactForm.contactMessage" required></textarea>
                     <br><br>
+                    <div data-netlify-recaptcha="true"></div>
                     <div class="flex-center">
                         <button type="button" class="btn-style" @click="clearForm">Clear Form</button>&nbsp;&nbsp;
                         <button type="submit" class="btn-style" @click="submitContactForm">Submit</button>
