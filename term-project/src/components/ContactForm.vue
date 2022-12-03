@@ -23,72 +23,20 @@ export default {
             event.preventDefault();
             // validate content, if true save data else do not save data
             if (this.validateForm()) {
-                const contactFormData = {
-                    name: this.contactForm.contactName,
-                    email: this.contactForm.contactEmail,
-                    message: this.contactForm.contactMessage,
-                    metadata: {
-                        submissionDate: new Date(),
-                        requestID: this.generateUUID()
-                    }
-                }
-
-                // event.target[1].value = new Date();
-                // event.target[2].value = this.generateUUID();
-
-                // const submittedForm = event.target;
-
-                let formData = new FormData();
-                formData.append('contactName', this.contactForm.contactName);
-                formData.append('contactEmail', this.contactForm.contactName);
-                formData.append('contactMessage', this.contactForm.contactName);
-                // formData.append('contactUUID', this.generateUUID());
-                // formData.append('submissionDate', new Date());
-                formData.append('form-name', "contactMeFormSubmission");
-
-                console.log("Form Data: " + formData);
-                console.log("Form Data: " + JSON.stringify(formData));
-
-
                 axios.post("/",
                     this.encode({
                         "form-name": "contactMeFormSubmission",
                         ...this.contactForm
-                        // "contactName": event.target.getAttribute("contactName"),
-                        // "contactEmail": event.target.getAttribute("contactEmail"),
-                        // "contactMessage": event.target.getAttribute("contactMessage"),
                     }),
                     { header: { "Content-Type": "application/x-www-form-urlencoded" } }
                 ).then(() => {
                     console.log("Form Successfully submitted!");
-                    // document.getElementById("responseViewer").textContent = JSON.stringify(contactFormData, undefined, 2);
                     alert('Submission Received!');
                     this.submitted = true;
                 })
                     .catch((error) => {
                         alert(error);
                     });
-
-
-                // await fetch("/", {
-                //     method: "POST",
-                //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                //     // body: this.encode({
-                //     //     "form-name": event.target.getAttribute("contactName"),
-
-                //     // }),
-                //     // body: new URLSearchParams(formData).toString()
-                //     body: formData
-                // })
-                //     .then(() => {
-                //         console.log("Form Successfully submitted!");
-                //         // document.getElementById("responseViewer").textContent = JSON.stringify(contactFormData, undefined, 2);
-                //         alert('Submission Received!');
-                //         this.submitted = true;
-                //     })
-                //     .catch((error) => {
-                //         alert(error);
-                //     });
                 // reset values in form
                 this.clearForm();
             } else {
@@ -182,13 +130,12 @@ export default {
             <p class="text-center">If you want to get in touch with me please fill out this contact form so that we can
                 connect!</p>
             <article id="contactMeFormContainer" class="flex-center">
-                <form name="contactMeFormSubmission" method="POST" action="/form-submit-success" data-netlify="true"
+                <form name="contactMeFormSubmission" method="POST"
                     netlify data-netlify-recaptcha="true" data-netlify-honeypot="bot-field"
                     @submit.prevent="submitContactForm">
-                    <!-- @submit.prevent="submitContactForm" -->
                     <input type="hidden" name="form-name" value="contactMeFormSubmission" />
-                    <!-- <input type="hidden" id="formSubmitDate" name="formSubmitDate" value="" />
-                    <input type="hidden" id="formUUID" name="formUUID" value="" /> -->
+                    <input type="hidden" id="formSubmitDate" name="formSubmitDate" value="" />
+                    <input type="hidden" id="formUUID" name="formUUID" value="" />
                     <label for="contactName">Name:</label><br>
                     <input type="text" id="contactName" name="contactName" v-model="contactForm.contactName"
                         placeholder="Ex. John Doe" required><br><br>
