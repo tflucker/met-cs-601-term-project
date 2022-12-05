@@ -21,14 +21,14 @@ export default {
         <p>
           I graduated Trumbull High School (Connecticut) in 2010. In 2014, I
           graduated from The George Washington University with a Bachelors of
-          Science in Biomedical Engineering with a minor in Chemistry. I am
+          Science in Biomedical Engineering and a minor in Chemistry. I am
           expected to graduate from Boston University with a Masters of Science
           in Software Development in Spring of 2023. I am really enjoying this
           program and I think it is a good challenge for me personally and
           professionally. With this degree I hope to reinforce my professional
           credentials, improve my self-confidence, and (hopefully) get a big
           raise/promotion at my job! Below is a table of the courses that I have
-          successfully completed with their grades.
+          successfully completed with their respective grades.
         </p>
         <div id="image-container" class="flex-center">
           <img src="./../assets/media/Trumbull-High-School.jpg" alt="Picture of Trumbull High School Logo"
@@ -103,7 +103,7 @@ export default {
           <p>
             Responsible for designing, developing, and testing Java and
             JavaScript code for applications related to my current contract.
-            Functioning in a Full-Stack type role, I will spending time working
+            Functioning in a Full-Stack type role, I am spending time working
             on various tasks / stories in the front-end and back-end of the
             application. As part of Agile/SCRUM team, I provide updates and
             impediments to my team members during our daily and weekly meetings.
@@ -138,7 +138,7 @@ export default {
           <h5>August 2014 - June 2019</h5>
           <p>
             Originally began as a tester responsible for manually testing
-            development, and creating documentation for my project. Was able to
+            development, and creating documentation for my project. I was able to
             learn on the job and become responsible for small code changes.
             Building my skill and confidence, I was able to switch roles to
             become a developer and work my way through the ranks from Associate

@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-
+  <!-- The 'flex-container class allows for the implementation of CSS Flexbox'-->
   <div id="page-top" class="flex-container">
     <!-- Loads HeaderSection component -->
     <header-section />

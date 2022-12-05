@@ -24,16 +24,16 @@ export default {
         class="nice-profile-pic standard-dimensions" srcset="./../assets/media/Nice-Profile-Pic.jpg" />
       </div>
       <p id="about-me-text">
-        Hello! Thanks for stopping by to learn more about me! My name is Timothy
-        Flucker and I am a developer based out of Washington DC and I currently
-        work as a Consultant for Deloitte as a Software Developer. I have been
+        Hello! Thank you for stopping by to learn more about me! My name is Timothy
+        Flucker and I am a developer based out of Washington DC, currently
+        working as a Consultant (Software Developer) for Deloitte. I have been
         in the IT consulting workforce since 2014 and I have worked for other
         consulting firms such as Accenture Federal Services and Atlas
         Consulting. I describe myself as a Full-Stack Developer with more of a
         focus on back-end development and I have been primarily been working
-        with federal agencies such as USPS, CISA (subset of DHS), and IRS.
+        with federal agencies such as USPS, CISA (subset of DHS), and the IRS.
         Currently, I am working on a contract with Raytheon as a developer on
-        their support team which is responsible for multiple applications. The
+        a support team which is responsible for multiple enterprise applications. The
         tech stack I am most comfortable with uses the following programming
         languages and frameworks:
       </p>
@@ -55,7 +55,7 @@ export default {
               Server-side Programming Language which translates user input into
               some action to retrieve, add, update, or delete data. Java 8
               introduces some really cool 'streaming' capabilities which enhance
-              the programming languages ability to interact with lists, maps,
+              the programming language's ability to interact and manipulate lists, maps,
               and other data structures efficiently.
             </td>
           </tr>
@@ -91,8 +91,8 @@ export default {
         My personal interests are a little nerdy, but they always keep me
         entertained and happy! I really enjoy reading, cooking, video games (RPG
         and Strategy), playing Dungeons and Dragons, and also spending time with
-        my beautiful wife, Sydney, and my dog, Lincoln. My wife got married in
-        September of 2021 and just celebrated our first anniversary together,
+        my beautiful wife, Sydney, and my dog, Lincoln. My wife and I got married in
+        September 2021 and just celebrated our first anniversary together,
         and we are getting ready for our honeymoon in Vietnam in February 2023.
         Prior to getting married we had been dating since 2015 and we started
         living together in 2018. My wife has been so incredibly supportive of me

@@ -1,5 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 
+// defines page routing information and which component to load for each route
 const routes = [
     {
         path: "/",
