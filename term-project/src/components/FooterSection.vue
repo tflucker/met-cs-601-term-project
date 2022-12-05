@@ -11,7 +11,6 @@ export default {
 <template>
   <!-- Footer giving author and version information -->
   <footer class="footer-style">
-    <hr />
     <a href="#page-top"
       ><img
         src="https://static.thenounproject.com/png/691751-200.png"

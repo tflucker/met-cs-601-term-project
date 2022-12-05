@@ -94,8 +94,6 @@ export default {
       </div>
     </section>
 
-    <hr />
-    <!-- bubble-container -->
     <section id="work-experience-section" class="page-jumbotron sea-green ">
       <h2 class="section-header-text">Work Experience</h2>
       <div id="work-experience-content">
@@ -158,8 +156,6 @@ export default {
       </div>
     </section>
 
-    <hr />
-    class="page-jumbotron sea-green text-center"
     <section id="certifications-article" class="page-jumbotron sea-green">
       <h2 class="section-header-text">Certifications</h2>
       <div id="certifications-content">
@@ -169,7 +165,7 @@ export default {
         </ul>
       </div>
     </section>
-    <hr />
+
     <section id="learn-more-article" class="page-jumbotron sea-green">
       <h2 class="section-header-text">Learn More</h2>
       <div id="learn-more-content">

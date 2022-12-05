@@ -10,8 +10,8 @@ export default {
   data() {
     return {
       currentPath: window.location.hash,
-      versionNum: '3.1.0', 
-      lastUpdateDate: '11/24/2022'
+      versionNum: '4.0.0',
+      lastUpdateDate: '12/5/2022'
     };
   },
 };
@@ -19,13 +19,16 @@ export default {
 
 <template>
 
-  <!-- Loads HeaderSection component -->
-  <header-section />
+  <div id="page-top" class="flex-container">
+    <!-- Loads HeaderSection component -->
+    <header-section />
 
-  <!-- Loads Vue components into this component tag -->
-  <!-- <component :is="currentView" /> -->
-  <router-view />
+    <!-- Loads Vue components into this component tag -->
+    <router-view />
+  </div>
+  <div class="flex-container">
+    <!-- Loads FooterSection component, with data -->
+    <footer-section :versionNum="versionNum" :lastUpdateDate="lastUpdateDate" />
+  </div>
 
-  <!-- Loads FooterSection component, with data -->
-  <footer-section :versionNum="versionNum" :lastUpdateDate="lastUpdateDate" />
 </template>

@@ -137,30 +137,26 @@ export default {
             <article id="contactMeFormContainer" class="flex-center">
                 <form name="contactMeFormSubmission" method="POST" data-netlify="true" netlify
                     data-netlify-recaptcha="true" data-netlify-honeypot="bot-field" @submit.prevent="submitContactForm">
-                    <!-- @submit.prevent="submitContactForm" -->
                     <input type="hidden" name="form-name" value="contactMeFormSubmission" />
                     <input type="hidden" id="formSubmitDate" name="formSubmitDate" v-model="contactForm.submissionDate" />
                     <input type="hidden" id="formUUID" name="formUUID" v-model="contactForm.UID" />
-                    <label for="contactName">Name:</label><br>
-                    <input type="text" id="contactName" name="contactName" v-model="contactForm.contactName"
-                        placeholder="Ex. John Doe" required><br><br>
-                    <label for="contactEmail">Email:</label><br>
-                    <input type="email" id="contactEmail" name="contactEmail" v-model="contactForm.contactEmail"
-                        placeholder="Ex. jdoe@email.com" required><br><br>
-                    <label for="contactMessage">Message:</label><br>
-                    <textarea id="contactMessage" name="contactMessage" cols="40" rows="10" class="responsive-textarea"
+                    <label for="contactName">Name:</label>
+                    <input type="text" id="contactName" class="margin-bottom-1" name="contactName" v-model="contactForm.contactName"
+                        placeholder="Ex. John Doe" required>
+                    <label for="contactEmail">Email:</label>
+                    <input type="email" id="contactEmail" class="margin-bottom-1" name="contactEmail" v-model="contactForm.contactEmail"
+                        placeholder="Ex. jdoe@email.com" required>
+                    <label for="contactMessage">Message:</label>
+                    <textarea id="contactMessage" class="margin-bottom-1" name="contactMessage" cols="40" rows="10" 
                         placeholder="This is a really cool site! It should get an A+ !!!"
                         v-model="contactForm.contactMessage" required></textarea>
-                    <br><br>
+                    
                     <div data-netlify-recaptcha="true"></div>
                     <div class="flex-center">
                         <button type="button" class="btn-style" @click="clearForm">Clear Form</button>&nbsp;&nbsp;
                         <button type="submit" class="btn-style">Submit</button>
-                        <!-- @click.prevent="submitContactForm" -->
                     </div>
-
                 </form>
-
             </article>
         </section>
 

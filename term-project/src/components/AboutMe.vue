@@ -19,8 +19,10 @@ export default {
     <!-- Container for the content on this page. Includes pictures, a table, and text about my profession and personal life. -->
     <section id="about-me-intro" class="page-jumbotron sea-green text-center">
       <h2 class="section-header-text">About Me - Timothy Flucker</h2>
-      <img src="./../assets/media/Nice-Profile-Pic.jpg" alt="Picture of Timothy Flucker"
+      <div>
+        <img src="./../assets/media/Nice-Profile-Pic.jpg" alt="Picture of Timothy Flucker"
         class="nice-profile-pic standard-dimensions" srcset="./../assets/media/Nice-Profile-Pic.jpg" />
+      </div>
       <p id="about-me-text">
         Hello! Thanks for stopping by to learn more about me! My name is Timothy
         Flucker and I am a developer based out of Washington DC and I currently

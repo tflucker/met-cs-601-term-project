@@ -1,4 +1,58 @@
 /* Global CSS classes */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    min-height: 10em;
+    width: 100%;
+    max-width: 100em;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header {
+    background: rgb(26, 188, 156);
+    background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+    flex: 0 0 25%;
+}
+
+main {
+    background-color: #678;
+    flex: 1 0;
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    margin-bottom: 2em;
+}
+
+footer {
+    min-height: 5em;
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+hr {
+    background-color: black;
+    height: 0.1em;
+    margin: 1em 0;
+    align-self: stretch;
+}
+
+label {
+    display: block;
+}
+
 .text-center {
     text-align: center;
 }
@@ -10,6 +64,15 @@
 .width-half {
     margin: 0 auto;
     width: 50%
+}
+
+.margin-y-sm {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.margin-bottom-1 {
+    margin-bottom: 1em;
 }
 
 .section-header-text {
@@ -42,7 +105,8 @@ li a:hover:not(.active) {
     background-color: #111;
 }
 
-.active, .cadet-blue {
+.active,
+.cadet-blue {
     background-color: #9FB4C7;
 }
 
@@ -60,19 +124,23 @@ th {
     border: 1px solid black;
 }
 
-tbody tr:hover {background-color: #9FB4C7;}
+tbody tr:hover {
+    background-color: #9FB4C7;
+}
 
 table {
     background-color: #EEEEFF;
 }
 
-thead tr, tr th {
+thead tr,
+tr th {
     background-color: #28587B;
     color: white;
+    font-size: larger;
 }
 
 
-.navbar-style {
+/* .navbar-style {
     width: auto;
 }
 
@@ -80,7 +148,7 @@ thead tr, tr th {
     position: relative;
     top: 0;
     width: 100%;
-}
+} */
 
 .navbar-style div#header-title-container {
     padding: 0.5em;
@@ -93,7 +161,7 @@ thead tr, tr th {
 
 
 .body-style {
-    padding: 5em 1em 2em 1em;
+    padding: 1em;
     background-image: url("media/code-background.jpg");
     /* Original credit for background image */
     /* https://pixabay.com/videos/binary-computer-programming-digital-16714/ */
@@ -101,12 +169,12 @@ thead tr, tr th {
 
 .footer-style {
     background-color: lightgray;
-    padding: 0em 0.5em 0.5em 1em;
+    padding: 1em;
     margin-top: -2em;
 }
 
 .page-jumbotron {
-    margin: 1em 10em;
+    margin: 1em 2em;
     padding: 3em 3em;
     border-radius: 2em;
 }
@@ -134,14 +202,14 @@ thead tr, tr th {
     border-radius: 2em;
 }
 
-.flex-center {
+/* .flex-center {
     display: flex;
     align-items: center;
     flex-direction: row;
     place-content: center;
     flex-wrap: wrap;
     justify-content: center;
-}
+} */
 
 .center-table {
     margin: 2em auto;
@@ -172,6 +240,21 @@ img.square-image {
 /* media query for mobile devices */
 @media (max-width: 767px) {
 
+
+    .flex-container {
+        flex-flow: column;
+        max-width: 25em;
+        min-height: 5em;
+    }
+
+    header {
+        flex: 0 1 auto;
+    }
+
+    main {
+        flex-flow: column;
+    }
+
     h1,
     h2,
     h3,
@@ -184,11 +267,6 @@ img.square-image {
         font-size: x-large;
     }
 
-    #welcome-content {
-        display: block;
-        margin: auto;
-    }
-
     .page-jumbotron {
         margin: 1em 1em;
         padding: 3em 3em;
@@ -197,26 +275,30 @@ img.square-image {
     #welcome-video {
         width: 200px;
         height: 175px;
-
     }
 
     .nice-profile-pic {
         width: 200px;
         height: 250px;
     }
-
-    .flex-center {
-        flex-direction: column;
-    }
-
-    .flex-center img {
-        margin: 1em 0;
-        border: 1px solid black;
-    }
 }
 
 /* media query for tablet devices */
 @media (min-width: 768px) and (max-width: 1024px) {
+
+    .flex-container {
+        flex-flow: column;
+    }
+
+
+    header {
+        flex: 0 1 auto;
+    }
+
+    main {
+        flex-flow: column wrap;
+    }
+
     h1,
     h2,
     h3,
@@ -224,7 +306,8 @@ img.square-image {
     h5,
     h6,
     p,
-    a {
+    a,
+    li {
         font-size: xx-large;
     }
 
@@ -264,6 +347,7 @@ img.square-image {
 /* media query for desktop devices */
 @media (min-width: 1025px) {
 
+
     div#image-container img {
         margin-left: 10px;
         margin-right: 10px;
@@ -289,6 +373,11 @@ img.square-image {
     .margin-right-sm {
         margin-right: 1em;
     }
+
+    video#welcome-video {
+        width: 400px;
+        height: 250px;
+    }
 }
 
 
@@ -311,6 +400,7 @@ img.square-image {
 }
 
 .nice-profile-pic {
+    margin: 1.5em 0;
     box-sizing: border-box;
     border: 5px white solid;
     border-radius: 50%;
@@ -330,16 +420,12 @@ img.square-image {
     height: 1.5em;
 }
 
-video#welcome-video {
-    width: 400px;
-    height: 250px;
-}
+
 
 img#web-dev-badges {
     width: 150px;
     height: 100px;
 }
-
 
 textarea {
     max-width: 100%;

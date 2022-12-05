@@ -55,7 +55,7 @@ export default {
       <h2 class="section-header-text text-center">Homepage</h2>
       <article class="text-center">
         <h2 class="section-header-text">Welcome to my portfolio site!</h2>
-        <div class="flex-center">
+        <div>
           <img src="./../assets/media/Nice-Profile-Pic.jpg" alt="Picture of Timothy Flucker"
             class="nice-profile-pic standard-dimensions" srcset="./../assets/media/Nice-Profile-Pic.jpg" />
           <p>
@@ -68,16 +68,19 @@ export default {
             <a href="mailto:tflucker@bu.edu">email</a>.
           </p>
         </div>
-        <div id="quote-container" class="flex-center" v-if="retrievedQuote">
+        <hr class="margin-y-sm">
+        <div id="quote-container" class="margin-y-sm " v-if="retrievedQuote">
           <p>Inspirational Quotes are generated from the <a href="https://api-ninjas.com/api/quotes" target="_blank">API
-              Ninja 'Quotes API'</a>.Only 10 requests are allowed per day.</p><br>
+              Ninja 'Quotes API'</a>.Only 10 requests are allowed per day.</p>
           <p>
-            <strong>Quote: </strong><span id="quote-text"></span><br>
-            <strong>Author: </strong><span id="quote-author"></span>
+            <strong>Quote: </strong><span id="quote-text">Not Shown</span>
+          </p>
+          <p>
+            <strong>Author: </strong><span id="quote-author">Not Shown</span>
           </p>
         </div>
       </article>
-      <br />
+      <hr class="margin-y-sm">
       <article class="text-center">
         <h2 class="section-header-text">Welcome Video</h2>
         <video id="welcome-video" controls>

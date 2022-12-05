@@ -14,7 +14,6 @@
         <li><router-link id="skillShowcase" to="/skill-showcase">Skill Showcase</router-link></li>
         <li><router-link id="contactForm" to="/contactForm">Contact Form</router-link></li>
         <li><router-link id="badLink" to="/bad-link">Bad Link</router-link></li>
-
       </ul>
     </div>
   </header>

@@ -121,102 +121,94 @@ export default {
     <main id="main-content" class="body-style">
         <section class="page-jumbotron sea-green">
             <h2 class="text-center">Clicker Game</h2>
+            <hr class="margin-y-sm">
             <article>
                 <h2>Metrics</h2>
                 <p>Total Clicks: {{ data.totalClicks }}</p>
                 <p>Click Power: {{ data.clickPower }}</p>
                 <p>Clicks per Second: {{ data.cps }}</p>
                 <p>Money per Second (MPS): {{ data.mps }}</p>
-                <hr>
-                <p>Money: {{ data.money }}</p>
+            </article>
+            <hr class="margin-y-sm">
+            <article>
+                <h2 class="text-center">Money: {{ data.money }}</h2>
             </article>
 
-
-
-            <button type="button" @click="increment()">Click Me</button>
+            <button type="button" class="btn-style margin-y-sm" @click="increment()">Click Me</button>
 
             <article v-if="showUpgrades">
                 <h2>Upgrades</h2>
-                <p id="small-clickPower-upgrade">
+                <p id="small-clickPower-upgrade" class="margin-y-sm">
                     <span>
                         <strong>Buy Small Click Power Upgrade:&nbsp;</strong>
-                        <span v-if="!purchasedAllUpgrades('SM_CLICK_POWER')">
-                            (Cost: {{ upgrades.SM_CLICK_POWER.cost }})&nbsp;&nbsp;&nbsp;<button type="button"
-                                @click="upgradeClickPower('SM_CLICK_POWER')"
-                                :disabled="!canAfford('SM_CLICK_POWER')">Buy</button>
-                        </span>
-
-                        <span v-if="purchasedAllUpgrades('SM_CLICK_POWER')">&nbsp;&nbsp;All upgrades purchased!</span>
+                        <span class="font-sm">&nbsp;&nbsp;Increase Clicks Power by 1</span>
                     </span>
-                    <br>
-                    <span class="font-sm">&nbsp;&nbsp;Increase Clicks Power by 1</span>
+                    <span v-if="!purchasedAllUpgrades('SM_CLICK_POWER')" class="">
+                        (Cost: {{ upgrades.SM_CLICK_POWER.cost }})&nbsp;&nbsp;&nbsp;<button type="button"
+                            class="btn-style margin-y-sm" @click="upgradeClickPower('SM_CLICK_POWER')"
+                            :disabled="!canAfford('SM_CLICK_POWER')">Buy</button>
+                    </span>
+
+                    <span v-if="purchasedAllUpgrades('SM_CLICK_POWER')">&nbsp;&nbsp;All upgrades purchased!</span>
                 </p>
-                <p id="medium-clickPower-upgrade" v-if="revealNewUpgrade('MD_CLICK_POWER')">
+                <p id="medium-clickPower-upgrade" class="margin-y-sm" v-if="revealNewUpgrade('MD_CLICK_POWER')">
                     <span>
                         <strong>Buy Medium Click Power Upgrade:&nbsp;</strong>
-                        <span v-if="!purchasedAllUpgrades('MD_CLICK_POWER')">
-                            (Cost: {{ upgrades.MD_CLICK_POWER.cost }})&nbsp;&nbsp;&nbsp;<button type="button"
-                                @click="upgradeClickPower('MD_CLICK_POWER')"
-                                :disabled="!canAfford('MD_CLICK_POWER')">Buy</button>
-                        </span>
-
-                        <span v-if="purchasedAllUpgrades('MD_CLICK_POWER')">&nbsp;&nbsp;All upgrades purchased!</span>
+                        <span class="font-sm">&nbsp;&nbsp;Increase Clicks Power by 10</span>
                     </span>
-                    <br>
-                    <span class="font-sm">&nbsp;&nbsp;Increase Clicks Power by 10</span>
+                    <span v-if="!purchasedAllUpgrades('MD_CLICK_POWER')">
+                        (Cost: {{ upgrades.MD_CLICK_POWER.cost }})&nbsp;&nbsp;&nbsp;<button type="button"
+                            class="btn-style margin-y-sm" @click="upgradeClickPower('MD_CLICK_POWER')"
+                            :disabled="!canAfford('MD_CLICK_POWER')">Buy</button>
+                    </span>
+
+                    <span v-if="purchasedAllUpgrades('MD_CLICK_POWER')">&nbsp;&nbsp;All upgrades purchased!</span>
                 </p>
-                <p id="large-clickPower-upgrade" v-if="revealNewUpgrade('LG_CLICK_POWER')">
+                <p id="large-clickPower-upgrade" class="margin-y-sm" v-if="revealNewUpgrade('LG_CLICK_POWER')">
                     <span>
                         <strong>Buy Large Click Power Upgrade:&nbsp;</strong>
-                        <span v-if="!purchasedAllUpgrades('LG_CLICK_POWER')">
-                            (Cost: {{ upgrades.LG_CLICK_POWER.cost }})&nbsp;&nbsp;&nbsp;<button type="button"
-                                @click="upgradeClickPower('LG_CLICK_POWER')"
-                                :disabled="!canAfford('LG_CLICK_POWER')">Buy</button>
-                        </span>
-
-                        <span v-if="purchasedAllUpgrades('LG_CLICK_POWER')">&nbsp;&nbsp;All upgrades purchased!</span>
+                        <span class="font-sm">&nbsp;&nbsp;Increase Clicks Power by 100</span>
                     </span>
-                    <br>
-                    <span class="font-sm">&nbsp;&nbsp;Increase Clicks Power by 100</span>
+                    <span v-if="!purchasedAllUpgrades('LG_CLICK_POWER')">
+                        (Cost: {{ upgrades.LG_CLICK_POWER.cost }})&nbsp;&nbsp;&nbsp;<button type="button"
+                            class="btn-style margin-y-sm" @click="upgradeClickPower('LG_CLICK_POWER')"
+                            :disabled="!canAfford('LG_CLICK_POWER')">Buy</button>
+                    </span>
+                    <span v-if="purchasedAllUpgrades('LG_CLICK_POWER')">&nbsp;&nbsp;All upgrades purchased!</span>
                 </p>
-                <br>
-                <hr>
-                <br>
-                <p id="small-autoClicker-upgrade">
+                <hr class="margin-y-sm">
+                <p id="small-autoClicker-upgrade" class="margin-y-sm">
                     <span>
                         <strong>Buy Small Auto-Clicker&nbsp;</strong>
-                        <span v-if="!purchasedAllUpgrades('SM_CPS')">(Cost: {{ upgrades.SM_CPS.cost
-                        }})&nbsp;<button type="button" @click="upgradeClicksPerSecond('SM_CPS')"
-                                :disabled="!canAfford('SM_CPS')">Buy</button>
-                        </span>
-                        <span v-if="purchasedAllUpgrades('SM_CPS')">&nbsp;&nbsp;All upgrades purchased!</span>
+                        <span class="font-sm">&nbsp;&nbsp;Increase Clicks per Second (CPS) by 0.1</span>
                     </span>
-                    <br>
-                    <span class="font-sm">&nbsp;&nbsp;Increase Clicks per Second (CPS) by 0.1</span>
+                    <span v-if="!purchasedAllUpgrades('SM_CPS')">(Cost: {{ upgrades.SM_CPS.cost
+                    }})&nbsp;<button type="button" class="btn-style margin-y-sm" @click="upgradeClicksPerSecond('SM_CPS')"
+                            :disabled="!canAfford('SM_CPS')">Buy</button>
+                    </span>
+                    <span v-if="purchasedAllUpgrades('SM_CPS')">&nbsp;&nbsp;All upgrades purchased!</span>
                 </p>
-                <p id="medium-autoClicker-upgrade" v-if="revealNewUpgrade('MD_CPS')">
+                <p id="medium-autoClicker-upgrade" class="margin-y-sm" v-if="revealNewUpgrade('MD_CPS')">
                     <span>
                         <strong>Buy Medium Auto-Clicker&nbsp;</strong>
-                        <span v-if="!purchasedAllUpgrades('MD_CPS')">(Cost: {{ upgrades.MD_CPS.cost
-                        }})&nbsp;<button type="button" @click="upgradeClicksPerSecond('MD_CPS')"
-                                :disabled="!canAfford('MD_CPS')">Buy</button>
-                        </span>
-                        <span v-if="purchasedAllUpgrades('MD_CPS')">&nbsp;&nbsp;All upgrades purchased!</span>
+                        <span class="font-sm">&nbsp;&nbsp;Increase Clicks per Second (CPS) by 1</span>
                     </span>
-                    <br>
-                    <span class="font-sm">&nbsp;&nbsp;Increase Clicks per Second (CPS) by 1</span>
+                    <span v-if="!purchasedAllUpgrades('MD_CPS')">(Cost: {{ upgrades.MD_CPS.cost
+                    }})&nbsp;<button type="button" class="btn-style margin-y-sm" @click="upgradeClicksPerSecond('MD_CPS')"
+                            :disabled="!canAfford('MD_CPS')">Buy</button>
+                    </span>
+                    <span v-if="purchasedAllUpgrades('MD_CPS')">&nbsp;&nbsp;All upgrades purchased!</span>
                 </p>
-                <p id="large-autoClicker-upgrade" v-if="revealNewUpgrade('LG_CPS')">
+                <p id="large-autoClicker-upgrade" class="margin-y-sm" v-if="revealNewUpgrade('LG_CPS')">
                     <span>
                         <strong>Buy Large Auto-Clicker&nbsp;</strong>
-                        <span v-if="!purchasedAllUpgrades('LG_CPS')">(Cost: {{ upgrades.LG_CPS.cost
-                        }})&nbsp;<button type="button" @click="upgradeClicksPerSecond('LG_CPS')"
-                                :disabled="!canAfford('LG_CPS')">Buy</button>
-                        </span>
-                        <span v-if="purchasedAllUpgrades('LG_CPS')">&nbsp;&nbsp;All upgrades purchased!</span>
+                        <span class="font-sm">&nbsp;&nbsp;Increase Clicks per Second (CPS) by 10</span>
                     </span>
-                    <br>
-                    <span class="font-sm">&nbsp;&nbsp;Increase Clicks per Second (CPS) by 10</span>
+                    <span v-if="!purchasedAllUpgrades('LG_CPS')">(Cost: {{ upgrades.LG_CPS.cost
+                    }})&nbsp;<button type="button" class="btn-style margin-y-sm" @click="upgradeClicksPerSecond('LG_CPS')"
+                            :disabled="!canAfford('LG_CPS')">Buy</button>
+                    </span>
+                    <span v-if="purchasedAllUpgrades('LG_CPS')">&nbsp;&nbsp;All upgrades purchased!</span>
                 </p>
             </article>
         </section>
