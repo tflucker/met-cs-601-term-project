@@ -39,13 +39,24 @@ export default {
                     this.submitted = true;
                 })
                     .catch((error) => {
-                        alert(error);
+                        document.getElementById("error-message-container").innerHTML = error.message;
                     });
 
                 // reset values in form
                 this.clearForm();
             } else {
-                alert(this.errorMessages);
+
+                let hasErrorText = document.createElement("p");
+                hasErrorText.appendChild(document.createTextNode("The following errors were detected.  Please modify your values and submit the form again."));
+
+                let list = document.createElement("ul");
+                this.errorMessages.forEach((value, index) => {
+                    let li = document.createElement("li");
+                    li.appendChild(document.createTextNode(value));
+                    list.appendChild(li);
+                });
+                document.getElementById("error-message-container").appendChild(hasErrorText);
+                document.getElementById("error-message-container").appendChild(list);
             }
         },
         encode(data) {
@@ -63,13 +74,17 @@ export default {
         validateForm() {
 
             let validName = false, validEmail = false, validMessage = false;
-            let errorMessage = "";
 
             // validate name
             if (this.contactForm.contactName && this.contactForm.contactName.trim() != "") {
-                validName = true;
+
+                if (this.contactForm.contactName.length > 2) {
+                    validName = true;
+                } else {
+                    this.errorMessages.push("ERROR: Contact Name must be greater than 2 characters!");
+                }
             } else {
-                errorMessage = "ERROR: Contact Name cannot be null or blank!";
+                this.errorMessages.push("ERROR: Contact Name cannot be null or blank!");
             }
             // validate email
             // verify value is not null and not blank
@@ -80,21 +95,18 @@ export default {
                 if (this.contactForm.contactEmail.match(emailRegEx)) {
                     validEmail = true;
                 } else {
-                    errorMessage += "\nERROR: Contact Email must be valid email format!";
+                    this.errorMessages.push("ERROR: Contact Email must be valid email format!");
+
                 }
             } else {
-                errorMessage += "\nERROR: Contact Email cannot be null or blank!";
+                this.errorMessages.push("ERROR: Contact Email cannot be null or blank!");
             }
 
             // validate message 
             if (this.contactForm.contactMessage && this.contactForm.contactMessage.trim() != "") {
                 validMessage = true;
             } else {
-                errorMessage += "\nERROR: Contact Message cannot be null or blank!"
-            }
-
-            if (errorMessage.length > 0) {
-                alert(errorMessage);
+                this.errorMessages.push("ERROR: Contact Message cannot be null or blank!");
             }
 
             return (validName && validEmail && validMessage);
@@ -134,23 +146,26 @@ export default {
             <h2 class="text-center">Contact Form</h2>
             <p class="text-center">If you want to get in touch with me please fill out this contact form so that we can
                 connect!</p>
+            <div id="error-message-container" class="margin-y-sm text-center red-text"></div>
             <article id="contactMeFormContainer" class="flex-center">
+                <h4 hidden>Form Title</h4>
                 <form name="contactMeFormSubmission" method="POST" data-netlify="true" netlify
                     data-netlify-recaptcha="true" data-netlify-honeypot="bot-field" @submit.prevent="submitContactForm">
                     <input type="hidden" name="form-name" value="contactMeFormSubmission" />
-                    <input type="hidden" id="formSubmitDate" name="formSubmitDate" v-model="contactForm.submissionDate" />
+                    <input type="hidden" id="formSubmitDate" name="formSubmitDate"
+                        v-model="contactForm.submissionDate" />
                     <input type="hidden" id="formUUID" name="formUUID" v-model="contactForm.UID" />
                     <label for="contactName">Name:</label>
-                    <input type="text" id="contactName" class="margin-bottom-1" name="contactName" v-model="contactForm.contactName"
-                        placeholder="Ex. John Doe" required>
+                    <input type="text" id="contactName" class="margin-bottom-1" name="contactName"
+                        v-model="contactForm.contactName" placeholder="Ex. John Doe" required>
                     <label for="contactEmail">Email:</label>
-                    <input type="email" id="contactEmail" class="margin-bottom-1" name="contactEmail" v-model="contactForm.contactEmail"
-                        placeholder="Ex. jdoe@email.com" required>
+                    <input type="email" id="contactEmail" class="margin-bottom-1" name="contactEmail"
+                        v-model="contactForm.contactEmail" placeholder="Ex. jdoe@email.com" required>
                     <label for="contactMessage">Message:</label>
-                    <textarea id="contactMessage" class="margin-bottom-1" name="contactMessage" cols="40" rows="10" 
+                    <textarea id="contactMessage" class="margin-bottom-1" name="contactMessage" cols="40" rows="10"
                         placeholder="This is a really cool site! It should get an A+ !!!"
                         v-model="contactForm.contactMessage" required></textarea>
-                    
+
                     <div data-netlify-recaptcha="true"></div>
                     <div class="flex-center">
                         <button type="button" class="btn-style" @click="clearForm">Clear Form</button>&nbsp;&nbsp;

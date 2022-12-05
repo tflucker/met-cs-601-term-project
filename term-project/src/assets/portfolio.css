@@ -61,6 +61,10 @@ label {
     font-style: italic;
 }
 
+.red-text {
+    color: red;
+}
+
 .width-half {
     margin: 0 auto;
     width: 50%
@@ -79,6 +83,10 @@ label {
     text-decoration: underline;
     font-size: xx-large;
     font-weight: bold;
+}
+
+ul {
+    list-style-position: inside;
 }
 
 ul#top-nav-menu {
