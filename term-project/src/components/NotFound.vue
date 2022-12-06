@@ -16,8 +16,10 @@ export default {
 <template>
     <main id="main-content" class="body-style">
         <section class="page-jumbotron sea-green text-center">
-            <h2>404 - Page Not Found</h2>
-            <p>No Vue file is defined for this link. Its intentional, and it shows that this application can handle an
+            <h2>Page Not Found</h2>
+            <img id="panda-error-img"  class="margin-y-sm" src="https://www.elegantthemes.com/blog/wp-content/uploads/2020/02/000-404.png" srcset="https://www.elegantthemes.com/blog/wp-content/uploads/2020/02/000-404.png" alt="404 error with panda at computer.">
+
+            <p class="margin-y-sm" >No Vue file is defined for this link. Its intentional, and it shows that this application can handle an
                 invalid
                 URL gracefully!</p>
         </section>

@@ -19,7 +19,7 @@ export default {
 
 <template>
   <!-- The 'flex-container class allows for the implementation of CSS Flexbox'-->
-  <div id="page-top" class="flex-container">
+  <div id="page-top" class="flex-container extra-min-height">
     <!-- Loads HeaderSection component -->
     <header-section />
 
