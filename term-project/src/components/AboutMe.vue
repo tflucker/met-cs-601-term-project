@@ -5,13 +5,12 @@ export default {
   },
   mounted: function () {
     // finds current 'active' navigation element and removes 'active' class
-    const activeElements = document.getElementsByClassName('active');
-    Array.from(activeElements).forEach(el => el.classList.remove('active'));
+    const activeElements = document.getElementsByClassName("active");
+    Array.from(activeElements).forEach((el) => el.classList.remove("active"));
     // add active class to current page
-    document.getElementById("aboutMe").classList.add('active');
-
-  }
-}
+    document.getElementById("aboutMe").classList.add("active");
+  },
+};
 </script>
 
 <template>
@@ -20,21 +19,25 @@ export default {
     <section id="about-me-intro" class="page-jumbotron sea-green text-center">
       <h2 class="section-header-text">About Me - Timothy Flucker</h2>
       <div>
-        <img src="./../assets/media/Nice-Profile-Pic.jpg" alt="Picture of Timothy Flucker"
-        class="nice-profile-pic standard-dimensions" srcset="./../assets/media/Nice-Profile-Pic.jpg" />
+        <img
+          src="./../assets/media/Nice-Profile-Pic.jpg"
+          alt="Picture of Timothy Flucker"
+          class="nice-profile-pic standard-dimensions"
+          srcset="./../assets/media/Nice-Profile-Pic.jpg"
+        />
       </div>
       <p id="about-me-text">
-        Hello! Thank you for stopping by to learn more about me! My name is Timothy
-        Flucker and I am a developer based out of Washington DC, currently
-        working as a Consultant (Software Developer) for Deloitte. I have been
-        in the IT consulting workforce since 2014 and I have worked for other
-        consulting firms such as Accenture Federal Services and Atlas
+        Hello! Thank you for stopping by to learn more about me! My name is
+        Timothy Flucker and I am a developer based out of Washington DC,
+        currently working as a Consultant (Software Developer) for Deloitte. I
+        have been in the IT consulting workforce since 2014 and I have worked
+        for other consulting firms such as Accenture Federal Services and Atlas
         Consulting. I describe myself as a Full-Stack Developer with more of a
         focus on back-end development and I have been primarily been working
         with federal agencies such as USPS, CISA (subset of DHS), and the IRS.
-        Currently, I am working on a contract with Raytheon as a developer on
-        a support team which is responsible for multiple enterprise applications. The
-        tech stack I am most comfortable with uses the following programming
+        Currently, I am working on a contract with Raytheon as a developer on a
+        support team which is responsible for multiple enterprise applications.
+        The tech stack I am most comfortable with uses the following programming
         languages and frameworks:
       </p>
     </section>
@@ -55,8 +58,8 @@ export default {
               Server-side Programming Language which translates user input into
               some action to retrieve, add, update, or delete data. Java 8
               introduces some really cool 'streaming' capabilities which enhance
-              the programming language's ability to interact and manipulate lists, maps,
-              and other data structures efficiently.
+              the programming language's ability to interact and manipulate
+              lists, maps, and other data structures efficiently.
             </td>
           </tr>
           <tr>
@@ -91,24 +94,40 @@ export default {
         My personal interests are a little nerdy, but they always keep me
         entertained and happy! I really enjoy reading, cooking, video games (RPG
         and Strategy), playing Dungeons and Dragons, and also spending time with
-        my beautiful wife, Sydney, and my dog, Lincoln. My wife and I got married in
-        September 2021 and just celebrated our first anniversary together,
-        and we are getting ready for our honeymoon in Vietnam in February 2023.
-        Prior to getting married we had been dating since 2015 and we started
-        living together in 2018. My wife has been so incredibly supportive of me
-        while I have been working on my Masters program, I definitely could not
-        have done this without her!
+        my beautiful wife, Sydney, and my dog, Lincoln. My wife and I got
+        married in September 2021 and just celebrated our first anniversary
+        together, and we are getting ready for our honeymoon in Vietnam in
+        February 2023. Prior to getting married we had been dating since 2015
+        and we started living together in 2018. My wife has been so incredibly
+        supportive of me while I have been working on my Masters program, I
+        definitely could not have done this without her!
       </p>
 
       <div id="image-container" class="flex-center">
-        <img class="standard-dimensions" src="./../assets/media/Nice-Family-Pic.jpg"
-          alt="Picture of Tim, Sydney, and Lincoln" srcset="./../assets/media/Nice-Family-Pic.jpg" />
-        <img class="standard-dimensions" src="./../assets/media/Nice-Sydney-Pic.jpg" alt="Picture of Sydney"
-          srcset="./../assets/media/Nice-Sydney-Pic.jpg" />
-        <img class="standard-dimensions" src="./../assets/media/Lincoln1.jpg"
-          alt="Picture of Lincoln with some fun lighting" srcset="./../assets/media/Lincoln1.jpg" />
-        <img class="standard-dimensions" src="./../assets/media/Lincoln2.jpg" alt="Picture of Lincoln with some flowers"
-          srcset="./../assets/media/Lincoln2.jpg" />
+        <img
+          class="standard-dimensions"
+          src="./../assets/media/Nice-Family-Pic.jpg"
+          alt="Picture of Tim, Sydney, and Lincoln"
+          srcset="./../assets/media/Nice-Family-Pic.jpg"
+        />
+        <img
+          class="standard-dimensions"
+          src="./../assets/media/Nice-Sydney-Pic.jpg"
+          alt="Picture of Sydney"
+          srcset="./../assets/media/Nice-Sydney-Pic.jpg"
+        />
+        <img
+          class="standard-dimensions"
+          src="./../assets/media/Lincoln1.jpg"
+          alt="Picture of Lincoln with some fun lighting"
+          srcset="./../assets/media/Lincoln1.jpg"
+        />
+        <img
+          class="standard-dimensions"
+          src="./../assets/media/Lincoln2.jpg"
+          alt="Picture of Lincoln with some flowers"
+          srcset="./../assets/media/Lincoln2.jpg"
+        />
       </div>
 
       <p>

@@ -5,13 +5,14 @@ import FooterSection from "./components/FooterSection.vue";
 export default {
   name: "app",
   components: {
-    HeaderSection, FooterSection
+    HeaderSection,
+    FooterSection,
   },
   data() {
     return {
       currentPath: window.location.hash,
-      versionNum: '4.0.0',
-      lastUpdateDate: '12/5/2022'
+      versionNum: "4.0.1",
+      lastUpdateDate: "12/11/2022",
     };
   },
 };
@@ -30,5 +31,4 @@ export default {
     <!-- Loads FooterSection component, with data -->
     <footer-section :versionNum="versionNum" :lastUpdateDate="lastUpdateDate" />
   </div>
-
 </template>

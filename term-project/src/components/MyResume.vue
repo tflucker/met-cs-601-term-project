@@ -5,13 +5,12 @@ export default {
   },
   mounted: function () {
     // finds current 'active' navigation element and removes 'active' class
-    const activeElements = document.getElementsByClassName('active');
-    Array.from(activeElements).forEach(el => el.classList.remove('active'));
+    const activeElements = document.getElementsByClassName("active");
+    Array.from(activeElements).forEach((el) => el.classList.remove("active"));
     // add active class to current page
-    document.getElementById("resume").classList.add('active');
-
-  }
-}
+    document.getElementById("resume").classList.add("active");
+  },
+};
 </script>
 <template>
   <main id="main-content" class="body-style">
@@ -31,13 +30,24 @@ export default {
           successfully completed with their respective grades.
         </p>
         <div id="image-container" class="flex-center">
-          <img src="./../assets/media/Trumbull-High-School.jpg" alt="Picture of Trumbull High School Logo"
-            srcset="./../assets/media/Trumbull-High-School.jpg" class="square-image" />
-          <img src="./../assets/media/George_Washington_University_seal.png"
+          <img
+            src="./../assets/media/Trumbull-High-School.jpg"
+            alt="Picture of Trumbull High School Logo"
+            srcset="./../assets/media/Trumbull-High-School.jpg"
+            class="square-image"
+          />
+          <img
+            src="./../assets/media/George_Washington_University_seal.png"
             alt="Picture of the George Washington University seal"
-            srcset="./../assets/media/George_Washington_University_seal.png" class="square-image" />
-          <img src="./../assets/media/Boston-University-seal.png" alt="Picture of the Boston University seal"
-            srcset="./../assets/media/Boston-University-seal.png" class="square-image" />
+            srcset="./../assets/media/George_Washington_University_seal.png"
+            class="square-image"
+          />
+          <img
+            src="./../assets/media/Boston-University-seal.png"
+            alt="Picture of the Boston University seal"
+            srcset="./../assets/media/Boston-University-seal.png"
+            class="square-image"
+          />
         </div>
 
         <table id="bu-transcript-table" class="text-center center-table">
@@ -94,17 +104,17 @@ export default {
       </div>
     </section>
 
-    <section id="work-experience-section" class="page-jumbotron sea-green ">
+    <section id="work-experience-section" class="page-jumbotron sea-green">
       <h2 class="section-header-text">Work Experience</h2>
       <div id="work-experience-content">
-        <article id="deloitte-work-experience" class="page-jumbotron sea-green ">
+        <article id="deloitte-work-experience" class="page-jumbotron sea-green">
           <h3>Deloitte Consulting, Consultant</h3>
           <h5>October 2021 - Present</h5>
           <p>
             Responsible for designing, developing, and testing Java and
             JavaScript code for applications related to my current contract.
-            Functioning in a Full-Stack type role, I am spending time working
-            on various tasks / stories in the front-end and back-end of the
+            Functioning in a Full-Stack type role, I am spending time working on
+            various tasks / stories in the front-end and back-end of the
             application. As part of Agile/SCRUM team, I provide updates and
             impediments to my team members during our daily and weekly meetings.
             My current project is with Raytheon working as a developer on a
@@ -138,8 +148,8 @@ export default {
           <h5>August 2014 - June 2019</h5>
           <p>
             Originally began as a tester responsible for manually testing
-            development, and creating documentation for my project. I was able to
-            learn on the job and become responsible for small code changes.
+            development, and creating documentation for my project. I was able
+            to learn on the job and become responsible for small code changes.
             Building my skill and confidence, I was able to switch roles to
             become a developer and work my way through the ranks from Associate
             Software Developer Analyst to Senior Software Developer Engineer. My
@@ -160,8 +170,10 @@ export default {
       <h2 class="section-header-text">Certifications</h2>
       <div id="certifications-content">
         <ul>
-          <li><strong>AWS Cloud Practitioner</strong>: September 2019 - September
-            2022</li>
+          <li>
+            <strong>AWS Cloud Practitioner</strong>: September 2019 - September
+            2022
+          </li>
         </ul>
       </div>
     </section>
@@ -172,14 +184,22 @@ export default {
         <p>Below are some links to my professional websites:</p>
         <ul>
           <li>
-            <a href="http://www.linkedin.com/in/timothy-flucker/" target="_blank">LinkedIn Profile</a>
+            <a
+              href="http://www.linkedin.com/in/timothy-flucker/"
+              target="_blank"
+              >LinkedIn Profile</a
+            >
             <span class="italic-text">(Feel free to connect!)</span>
           </li>
           <li>
-            <a href="https://github.com/tflucker" target="_blank">GitHub Profile</a>
+            <a href="https://github.com/tflucker" target="_blank"
+              >GitHub Profile</a
+            >
           </li>
           <li>
-            <a href="https://tflucker.wordpress.com/" target="_blank">Personal Wordpress Website</a>
+            <a href="https://tflucker.wordpress.com/" target="_blank"
+              >Personal Wordpress Website</a
+            >
             <span class="italic-text">(kind of like this assignment, lol)</span>
           </li>
         </ul>

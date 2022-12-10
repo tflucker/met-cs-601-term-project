@@ -2,10 +2,9 @@
 export default {
   props: {
     lastUpdateDate: String,
-    versionNum: String
-  }
-}
-
+    versionNum: String,
+  },
+};
 </script>
 
 <template>
@@ -20,8 +19,12 @@ export default {
     >
     <div class="text-center">
       <p>Created By: <strong>Timothy Flucker</strong></p>
-      <p>Last Updated On: <strong>{{ lastUpdateDate }}</strong></p>
-      <p>Version: <strong>{{ versionNum }}</strong></p>
+      <p>
+        Last Updated On: <strong>{{ lastUpdateDate }}</strong>
+      </p>
+      <p>
+        Version: <strong>{{ versionNum }}</strong>
+      </p>
     </div>
   </footer>
 </template>
