@@ -8,6 +8,8 @@ This project is meant to develop and showcase skills using:
  - JavaScript
  - Vue.js
  - Git
+
+This code is deployed via Netlify at the following link: https://amazing-monstera-cd7139.netlify.app/
  
 ## Setup Instructions
 Please follow these instructions and run the relevant commands to properly configure and run this application!
