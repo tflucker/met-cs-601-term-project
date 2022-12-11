@@ -17,7 +17,6 @@ export default {
           "X-Api-Key": API_KEY,
           "Content-Type": "application/json",
         },
-        body
       }).then((response) => {
         if (response.ok) {
           console.log("Success!");
