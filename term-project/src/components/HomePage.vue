@@ -12,11 +12,12 @@ export default {
 
       return await fetch(API_URL, {
         method: "GET",
+        mode: 'cors',
         headers: {
           "X-Api-Key": API_KEY,
           "Content-Type": "application/json",
-          'Access-Control-Allow-Origin': "https://api.api-ninjas.com",
         },
+        body
       }).then((response) => {
         if (response.ok) {
           console.log("Success!");
