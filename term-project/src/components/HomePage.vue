@@ -15,7 +15,7 @@ export default {
         headers: {
           "X-Api-Key": API_KEY,
           "Content-Type": "application/json",
-          'Access-Control-Allow-Origin': "*",
+          'Access-Control-Allow-Origin': "https://api.api-ninjas.com",
         },
       }).then((response) => {
         if (response.ok) {
