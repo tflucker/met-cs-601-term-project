@@ -15,6 +15,7 @@ export default {
         headers: {
           "X-Api-Key": API_KEY,
           "Content-Type": "application/json",
+          'Access-Control-Allow-Origin': "*",
         },
       }).then((response) => {
         if (response.ok) {
