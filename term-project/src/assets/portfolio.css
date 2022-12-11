@@ -9,7 +9,7 @@
 .flex-container {
     min-height: 10em;
     width: 100%;
-    max-width: 100em;
+    max-width: 125em;
     display: flex;
     flex-flow: row wrap;
 }
