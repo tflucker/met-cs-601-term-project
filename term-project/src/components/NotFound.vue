@@ -27,7 +27,7 @@ export default {
       />
 
       <p class="margin-y-sm">
-        No Vue file is defined for this link. Its intentional, and it shows that
+        No Vue file is defined for this link. It's intentional, and it shows that
         this application can handle an invalid URL gracefully!
       </p>
     </section>
